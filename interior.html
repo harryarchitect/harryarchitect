@@ -1,0 +1,1057 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- --- SEO META TAGS --- -->
+     <link rel="icon" type="image/webp" href="logo.webp">
+    <title>Premium Interior Design in Pakistan | Harry Architect</title>
+    <meta name="description" content="Transform your living space with Harry Architect. Explore 20+ luxury and modern interior layouts across Pakistan including kitchens, luxury bedrooms, and executive office setups.">
+    <meta name="keywords" content="Interior Design Pakistan, Harry Architect, Modern Kitchen Design, Bedroom Interior, Office Setup Pattoki, Luxury Drawing Room, Architectural Services Pakistan">
+    <meta name="author" content="Harry Architect">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph / Facebook SEO -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://harryarchitect.com/interior.html">
+    <meta property="og:title" content="Premium Interior Design in Pakistan | Harry Architect">
+    <meta property="og:description" content="Discover professional and luxurious interior design layouts tailored for Pakistani homes and commercial setups.">
+    <meta property="og:image" content="i1.webp">
+
+    <!-- Twitter SEO -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:title" content="Premium Interior Design in Pakistan | Harry Architect">
+    <meta property="twitter:description" content="Discover professional and luxurious interior design layouts tailored for Pakistani homes and commercial setups.">
+
+    <!-- Schema.org Structured Data (Local Business SEO) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "Harry Architect",
+      "image": "i1.webp",
+      "telephone": "+923245301575",
+      "email": "Harry846376@gmail.com",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Pattoki",
+        "addressRegion": "Punjab",
+        "addressCountry": "PK"
+      },
+      "url": "https://harryarchitect.com"
+    }
+    </script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* --- CSS VARIABLES & RESET --- */
+        :root {
+            --primary-bg: #121212;
+            --card-bg: #1e1e1e;
+            --text-color: #F5F5F5;
+            --text-muted: #b3b3b3;
+            --accent-gold: #D4AF37;
+            --accent-bronze: #CD7F32;
+            --font-main: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            text-decoration: none;
+            list-style: none;
+        }
+
+        body {
+            background-color: var(--primary-bg);
+            color: var(--text-color);
+            font-family: var(--font-main);
+            overflow-x: hidden;
+            line-height: 1.6;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        section {
+            padding: 40px 0 80px 0;
+        }
+
+        /* --- HEADER & NAVBAR --- */
+        header {
+            background-color: rgba(18, 18, 18, 0.95);
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            border-bottom: 1px solid rgba(212, 175, 55, 0.1);
+            backdrop-filter: blur(10px);
+        }
+
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 80px;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--accent-gold);
+        }
+
+        .navbar {
+            display: flex;
+            gap: 15px;
+        }
+
+        .nav-link {
+            color: var(--text-color);
+            font-size: 0.95rem;
+            font-weight: 500;
+            padding: 8px 12px;
+            border-radius: 4px;
+            transition: all 0.3s ease;
+        }
+
+        .nav-link:hover, .nav-link.active {
+            color: var(--accent-gold);
+            background-color: rgba(212, 175, 55, 0.1);
+        }
+
+        .menu-btn {
+            display: none;
+            color: var(--text-color);
+            font-size: 1.5rem;
+            cursor: pointer;
+            z-index: 1001;
+        }
+
+        /* --- PAGE BANNER --- */
+        .page-banner {
+            background: linear-gradient(rgba(18, 18, 18, 0.8), rgba(18, 18, 18, 0.95)), url('img017.webp') center/cover;
+            padding: 160px 0 60px 0;
+            text-align: center;
+            border-bottom: 1px solid rgba(212, 175, 55, 0.1);
+        }
+
+        .page-banner h1 {
+            font-size: 3rem;
+            color: var(--accent-gold);
+            margin-bottom: 10px;
+        }
+
+        .page-banner p {
+            color: var(--text-muted);
+            font-size: 1.1rem;
+        }
+
+        /* --- CATEGORY BUTTONS NAVIGATION --- */
+        .category-nav {
+            padding: 40px 0 10px 0;
+            text-align: center;
+        }
+
+        .category-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .btn-category {
+            padding: 12px 25px;
+            font-size: 1rem;
+            font-weight: 600;
+            border-radius: 5px;
+            color: var(--text-color);
+            border: 1px solid rgba(212, 175, 55, 0.3);
+            background-color: var(--card-bg);
+            transition: all 0.3s ease;
+            display: inline-block;
+        }
+
+        .btn-category:hover, .btn-category.active {
+            background-color: var(--accent-gold);
+            color: #111111;
+            border-color: var(--accent-gold);
+            box-shadow: 0 4px 15px rgba(212, 175, 55, 0.2);
+        }
+
+        /* --- INTERIOR GRID --- */
+        .elevation-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            margin-top: 20px;
+        }
+
+        /* --- ANIMATION STYLES (NEW) --- */
+        .animate-fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+        }
+
+        .animate-fade-in.appear {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .elevation-card {
+            background-color: var(--card-bg);
+            border-radius: 8px;
+            overflow: hidden;
+            border: 1px solid rgba(255,255,255,0.05);
+            transition: transform 0.3s, border-color 0.3s, opacity 0.6s ease-out, transform 0.6s ease-out;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .elevation-card:hover {
+            transform: translateY(-8px);
+            border-color: var(--accent-gold);
+            box-shadow: 0 10px 20px rgba(212, 175, 55, 0.1);
+        }
+
+        /* 1:1 Aspect Ratio Box */
+        .elevation-img-wrapper {
+            position: relative;
+            width: 100%;
+            aspect-ratio: 1 / 1;
+            overflow: hidden;
+            background-color: #171717;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .elevation-img {
+            max-height: 100%;
+            max-width: 100%;
+            width: auto;
+            height: auto;
+            object-fit: contain;
+            transition: transform 0.5s ease;
+        }
+
+        .elevation-card:hover .elevation-img {
+            transform: scale(1.08);
+        }
+
+        .elevation-info {
+            padding: 20px;
+        }
+
+        .elevation-info h3 {
+            font-size: 1.3rem;
+            margin-bottom: 15px;
+            color: var(--text-color);
+        }
+
+        .card-actions {
+            display: flex;
+            gap: 10px;
+        }
+
+        .btn-card {
+            flex: 1;
+            padding: 10px;
+            text-align: center;
+            font-size: 0.9rem;
+            font-weight: 600;
+            border-radius: 4px;
+            transition: all 0.3s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 6px;
+            cursor: pointer;
+        }
+
+        .btn-view {
+            background-color: transparent;
+            color: var(--text-color);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .btn-view:hover {
+            border-color: var(--accent-gold);
+            color: var(--accent-gold);
+        }
+
+        .btn-order {
+            background-color: #25D366;
+            color: white;
+            border: 1px solid transparent;
+        }
+
+        .btn-order:hover {
+            background-color: #20ba5a;
+        }
+
+        /* --- FLOATING BUTTONS --- */
+        .floating-container {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            z-index: 999;
+        }
+
+        .floating-btn {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.8rem;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+            transition: transform 0.3s ease, background-color 0.3s;
+        }
+
+        .floating-btn:hover {
+            transform: scale(1.1);
+        }
+
+        .float-whatsapp {
+            background-color: #25D366;
+            color: white;
+        }
+
+        .float-whatsapp:hover {
+            background-color: #20ba5a;
+        }
+
+        .float-home {
+            background-color: var(--accent-gold);
+            color: #111111;
+        }
+
+        .float-home:hover {
+            background-color: #bfa030;
+        }
+
+        /* --- FULL SCREEN LIGHTBOX & WATERMARK --- */
+        .lightbox-modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.95);
+            z-index: 2000;
+            justify-content: center;
+            align-items: center;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .lightbox-modal.show {
+            display: flex;
+            opacity: 1;
+        }
+
+        .lightbox-wrapper {
+            position: relative;
+            max-width: 90%;
+            max-height: 85%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transform: scale(0.9);
+            transition: transform 0.3s ease;
+        }
+
+        .lightbox-modal.show .lightbox-wrapper {
+            transform: scale(1);
+        }
+
+        .lightbox-img {
+            max-width: 100%;
+            max-height: 85vh;
+            object-fit: contain;
+            border-radius: 4px;
+            box-shadow: 0 0 20px rgba(0,0,0,0.8);
+        }
+
+        .lightbox-watermark {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) rotate(-30deg);
+            color: rgba(255, 255, 255, 0.25);
+            font-size: 2.5rem;
+            font-weight: bold;
+            white-space: nowrap;
+            pointer-events: none;
+            text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+            font-family: var(--font-main);
+            letter-spacing: 2px;
+            border: 3px dashed rgba(255, 255, 255, 0.15);
+            padding: 10px 20px;
+        }
+
+        .lightbox-close {
+            position: absolute;
+            top: -50px;
+            left: 0;
+            color: var(--text-color);
+            font-size: 2rem;
+            cursor: pointer;
+            transition: color 0.3s;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .lightbox-close:hover {
+            color: var(--accent-gold);
+        }
+
+        .lightbox-close span {
+            font-size: 1.1rem;
+            font-weight: 500;
+        }
+
+        /* --- FOOTER --- */
+        footer {
+            background-color: #0c0c0c;
+            padding: 70px 0 20px 0;
+            border-top: 1px solid rgba(212, 175, 55, 0.1);
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr;
+            gap: 50px;
+            margin-bottom: 5px;
+        }
+
+        .footer-col h3 {
+            color: var(--accent-gold);
+            font-size: 1.3rem;
+            margin-bottom: 25px;
+            position: relative;
+        }
+
+        .footer-col p {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            margin-bottom: 20px;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 15px;
+        }
+
+        .social-links a {
+            width: 40px;
+            height: 40px;
+            background-color: var(--card-bg);
+            color: var(--text-color);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            font-size: 1.1rem;
+            transition: all 0.3s;
+        }
+
+        .social-links a:hover {
+            background-color: var(--accent-gold);
+            color: var(--primary-bg);
+            transform: translateY(-3px);
+        }
+
+        .footer-links {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 12px;
+        }
+
+        .footer-links a {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            transition: color 0.3s;
+        }
+
+        .footer-links a:hover {
+            color: var(--accent-gold);
+        }
+
+        .content-info-list {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .content-info-list li {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            color: var(--text-muted);
+            font-size: 0.95rem;
+        }
+
+        .content-info-list i {
+            color: var(--accent-gold);
+            font-size: 1.1rem;
+            width: 20px;
+        }
+
+        .copyright-bar {
+            text-align: center;
+            padding-top: 30px;
+            margin-top: 40px;
+            border-top: 1px solid rgba(255,255,255,0.05);
+            font-size: 0.9rem;
+            color: var(--text-muted);
+        }
+
+        /* --- RESPONSIVE MEDIA QUERIES --- */
+        @media (max-width: 992px) {
+            .navbar {
+                display: flex;
+                flex-direction: column;
+                position: absolute;
+                top: 80px;
+                left: -100%;
+                width: 100%;
+                background-color: rgba(18, 18, 18, 0.98);
+                padding: 20px 5%;
+                gap: 10px;
+                border-bottom: 1px solid rgba(212, 175, 55, 0.2);
+                transition: left 0.4s ease;
+                backdrop-filter: blur(15px);
+            }
+
+            .navbar.active {
+                left: 0;
+            }
+            
+            .menu-btn {
+                display: block;
+            }
+
+            .elevation-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .page-banner h1 {
+                font-size: 2.2rem;
+            }
+
+            .category-buttons {
+                gap: 10px;
+            }
+
+            .btn-category {
+                padding: 10px 18px;
+                font-size: 0.9rem;
+                flex: 1;
+                min-width: 140px;
+            }
+
+            .elevation-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .lightbox-watermark {
+                font-size: 1.4rem;
+                padding: 5px 10px;
+            }
+            
+            .floating-container {
+                bottom: 20px;
+                right: 20px;
+            }
+            .floating-btn {
+                width: 50px;
+                height: 50px;
+                font-size: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- HEADER -->
+    <header>
+        <div class="container nav-container">
+            <a href="index.html" class="logo">
+                <i class="fa-solid fa-compass-drafting"></i> Harry Architect
+            </a>
+            <ul class="navbar" id="mobileNavbar">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="about.html" class="nav-link">About</a></li>
+                <li><a href="projects.html" class="nav-link">Projects</a></li>
+                <li><a href="design-elevation.html" class="nav-link active">Design&Elevation</a></li>
+                <li><a href="services.html" class="nav-link">Services</a></li>
+                <li><a href="packages.html" class="nav-link">Packages</a></li>
+                <li><a href="blogs.html" class="nav-link">Blogs</a></li>
+                <li><a href="Contact.html" class="nav-link">Contact</a></li>
+            </ul>
+            <div class="menu-btn" id="menuToggle"><i class="fa-solid fa-bars"></i></div>
+        </div>
+    </header>
+
+    <!-- PAGE HERO BANNER -->
+    <div class="page-banner animate-fade-in">
+        <div class="container">
+            <h1>Premium Interior Design</h1>
+            <p>Transform your spaces with our 20 luxurious & modern interior layouts across Pakistan</p>
+        </div>
+    </div>
+
+    <!-- NAVIGATION BUTTONS SECTION -->
+    <div class="category-nav animate-fade-in">
+        <div class="container">
+            <div class="category-buttons">
+                <a href="design-elevation.html" class="btn-category"><i class="fa-solid fa-building"></i> Elevation Design</a>
+                <a href="interior.html" class="btn-category active"><i class="fa-solid fa-couch"></i> Interior Design</a>
+                <a href="landscape.html" class="btn-category"><i class="fa-solid fa-tree"></i> Landscape Design</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- 20 INTERIOR CARDS GRID SECTION -->
+    <section>
+        <div class="container">
+            <div class="elevation-grid">
+                
+                <!-- CARD 1 -->
+                <div class="elevation-card animate-fade-in">
+                    <div class="elevation-img-wrapper">
+                        <img src="i1.webp" alt="Modern Kitchen Interior Design by Harry Architect" class="elevation-img" loading="lazy">
+                    </div>
+                    <div class="elevation-info">
+                        <h3>Modern Kitchen </h3>
+                        <div class="card-actions">
+                            <button onclick="openLightbox('i1.webp')" class="btn-card btn-view"><i class="fa-solid fa-eye"></i> View</button>
+                            <a href="https://wa.me/923245301575?text=Hi%20Harry%20Architect,%20I%20am%20interested%20in%20Luxury%20Drawing%20Room%20Interior%20Design." target="_blank" class="btn-card btn-order"><i class="fa-brands fa-whatsapp"></i> Order</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- CARD 2 -->
+                <div class="elevation-card animate-fade-in">
+                    <div class="elevation-img-wrapper">
+                        <img src="i2.webp" alt="Luxury Guest Room Interior Setup" class="elevation-img" loading="lazy">
+                    </div>
+                    <div class="elevation-info">
+                        <h3>Guest Room</h3>
+                        <div class="card-actions">
+                            <button onclick="openLightbox('i2.webp')" class="btn-card btn-view"><i class="fa-solid fa-eye"></i> View</button>
+                            <a href="https://wa.me/923245301575?text=Hi%20Harry%20Architect,%20I%20am%20interested%20in%20Modern%20Bedroom%20Interior%20Design." target="_blank" class="btn-card btn-order"><i class="fa-brands fa-whatsapp"></i> Order</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- CARD 3 -->
+                <div class="elevation-card animate-fade-in">
+                    <div class="elevation-img-wrapper">
+                        <img src="i3.webp" alt="Modern Cloth Shop Interior Design" class="elevation-img" loading="lazy">
+                    </div>
+                    <div class="elevation-info">
+                        <h3>Cloth Shop</h3>
+                        <div class="card-actions">
+                            <button onclick="openLightbox('i3.webp')" class="btn-card btn-view"><i class="fa-solid fa-eye"></i> View</button>
+                            <a href="https://wa.me/923245301575?text=Hi%20Harry%20Architect,%20I%20am%20interested%20in%20Elegant%20TV%20Lounge%20Interior." target="_blank" class="btn-card btn-order"><i class="fa-brands fa-whatsapp"></i> Order</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- CARD 4 -->
+                <div class="elevation-card animate-fade-in">
+                    <div class="elevation-img-wrapper">
+                        <img src="i4.webp" alt="Modern Lounge and Living Room Design" class="elevation-img" loading="lazy">
+                    </div>
+                    <div class="elevation-info">
+                        <h3>Modern Launge Design</h3>
+                        <div class="card-actions">
+                            <button onclick="openLightbox('i4.webp')" class="btn-card btn-view"><i class="fa-solid fa-eye"></i> View</button>
+                            <a href="https://wa.me/923245301575?text=Hi%20Harry%20Architect,%20I%20am%20interested%20in%20Modular%20Kitchen%20Design." target="_blank" class="btn-card btn-order"><i class="fa-brands fa-whatsapp"></i> Order</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- CARD 5 -->
+                <div class="elevation-card animate-fade-in">
+                    <div class="elevation-img-wrapper">
+                        <img src="i5.webp" alt="Premium Dining Hall Interior" class="elevation-img" loading="lazy">
+                    </div>
+                    <div class="elevation-info">
+                        <h3>Premium Dining Hall</h3>
+                        <div class="card-actions">
+                            <button onclick="openLightbox('i5.webp')" class="btn-card btn-view"><i class="fa-solid fa-eye"></i> View</button>
+                            <a href="https://wa.me/923245301575?text=Hi%20Harry%20Architect,%20I%20am%20interested%20in%20Premium%20Dining%20Hall%20Design." target="_blank" class="btn-card btn-order"><i class="fa-brands fa-whatsapp"></i> Order</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- CARD 6 -->
+                <div class="elevation-card animate-fade-in">
+                    <div class="elevation-img-wrapper">
+                        <img src="i6.webp" alt="Mini Office Space Design" class="elevation-img" loading="lazy">
+                    </div>
+                    <div class="elevation-info">
+                        <h3>Mini Office</h3>
+                        <div class="card-actions">
+                            <button onclick="openLightbox('i6.webp')" class="btn-card btn-view"><i class="fa-solid fa-eye"></i> View</button>
+                            <a href="https://wa.me/923245301575?text=Hi%20Harry%20Architect,%20I%20am%20interested%20in%20Minimalist%20Living%20Room%20Design." target="_blank" class="btn-card btn-order"><i class="fa-brands fa-whatsapp"></i> Order</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- CARD 7 -->
+                <div class="elevation-card animate-fade-in">
+                    <div class="elevation-img-wrapper">
+                        <img src="i7.webp" alt="Executive Office Setup Interior" class="elevation-img" loading="lazy">
+                    </div>
+                    <div class="elevation-info">
+                        <h3>Executive Office Setup</h3>
+                        <div class="card-actions">
+                            <button onclick="openLightbox('i7.webp')" class="btn-card btn-view"><i class="fa-solid fa-eye"></i> View</button>
+                            <a href="https://wa.me/923245301575?text=Hi%20Harry%20Architect..." target="_blank" class="btn-card btn-order"><i class="fa-brands fa-whatsapp"></i> Order</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- CARD 8 -->
+                <div class="elevation-card animate-fade-in">
+                    <div class="elevation-img-wrapper">
+                        <img src="i8.webp" alt="Luxury Bathroom Interior Layout" class="elevation-img" loading="lazy">
+                    </div>
+                    <div class="elevation-info">
+                        <h3>Luxury Bathroom Interior</h3>
+                        <div class="card-actions">
+                            <button onclick="openLightbox('i8.webp')" class="btn-card btn-view"><i class="fa-solid fa-eye"></i> View</button>
+                            <a href="https://wa.me/923245301575?text=Hi%20Harry%20Architect..." target="_blank" class="btn-card btn-order"><i class="fa-brands fa-whatsapp"></i> Order</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- CARD 9 -->
+                <div class="elevation-card animate-fade-in">
+                    <div class="elevation-img-wrapper">
+                        <img src="i9.webp" alt="Classic Kids Bedroom Design" class="elevation-img" loading="lazy">
+                    </div>
+                    <div class="elevation-info">
+                        <h3>Classic Kids Bedroom</h3>
+                        <div class="card-actions">
+                            <button onclick="openLightbox('i9.webp')" class="btn-card btn-view"><i class="fa-solid fa-eye"></i> View</button>
+                            <a href="https://wa.me/923245301575?text=Hi%20Harry%20Architect..." target="_blank" class="btn-card btn-order"><i class="fa-brands fa-whatsapp"></i> Order</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- CARD 10 -->
+                <div class="elevation-card animate-fade-in">
+                    <div class="elevation-img-wrapper">
+                        <img src="i10.webp" alt="Simple and Elegant Bedroom Interior" class="elevation-img" loading="lazy">
+                    </div>
+                    <div class="elevation-info">
+                        <h3>Simple Bedroom Design</h3>
+                        <div class="card-actions">
+                            <button onclick="openLightbox('i10.webp')" class="btn-card btn-view"><i class="fa-solid fa-eye"></i> View</button>
+                            <a href="https://wa.me/923245301575?text=Hi%20Harry%20Architect..." target="_blank" class="btn-card btn-order"><i class="fa-brands fa-whatsapp"></i> Order</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- CARD 11 -->
+                <div class="elevation-card animate-fade-in">
+                    <div class="elevation-img-wrapper">
+                        <img src="i11.webp" alt="Beautiful Guest Room Layout" class="elevation-img" loading="lazy">
+                    </div>
+                    <div class="elevation-info">
+                        <h3>Beautiful Guest Room</h3>
+                        <div class="card-actions">
+                            <button onclick="openLightbox('i11.webp')" class="btn-card btn-view"><i class="fa-solid fa-eye"></i> View</button>
+                            <a href="https://wa.me/923245301575?text=Hi%20Harry%20Architect..." target="_blank" class="btn-card btn-order"><i class="fa-brands fa-whatsapp"></i> Order</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- CARD 12 -->
+                <div class="elevation-card animate-fade-in">
+                    <div class="elevation-img-wrapper">
+                        <img src="i12.webp" alt="Modern Bedroom Interior Design Portfolio" class="elevation-img" loading="lazy">
+                    </div>
+                    <div class="elevation-info">
+                        <h3>Modern Bedroom Design</h3>
+                        <div class="card-actions">
+                            <button onclick="openLightbox('i12.webp')" class="btn-card btn-view"><i class="fa-solid fa-eye"></i> View</button>
+                            <a href="https://wa.me/923245301575?text=Hi%20Harry%20Architect..." target="_blank" class="btn-card btn-order"><i class="fa-brands fa-whatsapp"></i> Order</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- CARD 13 -->
+                <div class="elevation-card animate-fade-in">
+                    <div class="elevation-img-wrapper">
+                        <img src="i13.webp" alt="Simple and Minimalist Kitchen Design" class="elevation-img" loading="lazy">
+                    </div>
+                    <div class="elevation-info">
+                        <h3>Simple Kitchen</h3>
+                        <div class="card-actions">
+                            <button onclick="openLightbox('i13.webp')" class="btn-card btn-view"><i class="fa-solid fa-eye"></i> View</button>
+                            <a href="https://wa.me/923245301575?text=Hi%20Harry%20Architect..." target="_blank" class="btn-card btn-order"><i class="fa-brands fa-whatsapp"></i> Order</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- CARD 14 -->
+                <div class="elevation-card animate-fade-in">
+                    <div class="elevation-img-wrapper">
+                        <img src="i14.webp" alt="Corporate Meeting Room Setup" class="elevation-img" loading="lazy">
+                    </div>
+                    <div class="elevation-info">
+                        <h3>Meeting Room</h3>
+                        <div class="card-actions">
+                            <button onclick="openLightbox('i14.webp')" class="btn-card btn-view"><i class="fa-solid fa-eye"></i> View</button>
+                            <a href="https://wa.me/923245301575?text=Hi%20Harry%20Architect..." target="_blank" class="btn-card btn-order"><i class="fa-brands fa-whatsapp"></i> Order</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- CARD 15 -->
+                <div class="elevation-card animate-fade-in">
+                    <div class="elevation-img-wrapper">
+                        <img src="i15.webp" alt="Luxury Lobby and Lounge Interior" class="elevation-img" loading="lazy">
+                    </div>
+                    <div class="elevation-info">
+                        <h3>Lobby & Launge Interior</h3>
+                        <div class="card-actions">
+                            <button onclick="openLightbox('i15.webp')" class="btn-card btn-view"><i class="fa-solid fa-eye"></i> View</button>
+                            <a href="https://wa.me/923245301575?text=Hi%20Harry%20Architect..." target="_blank" class="btn-card btn-order"><i class="fa-brands fa-whatsapp"></i> Order</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- CARD 16 -->
+                <div class="elevation-card animate-fade-in">
+                    <div class="elevation-img-wrapper">
+                        <img src="i16.webp" alt="Modern Dining and Lounge Area" class="elevation-img" loading="lazy">
+                    </div>
+                    <div class="elevation-info">
+                        <h3>Modern Dining & Launge</h3>
+                        <div class="card-actions">
+                            <button onclick="openLightbox('i16.webp')" class="btn-card btn-view"><i class="fa-solid fa-eye"></i> View</button>
+                            <a href="https://wa.me/923245301575?text=Hi%20Harry%20Architect..." target="_blank" class="btn-card btn-order"><i class="fa-brands fa-whatsapp"></i> Order</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- CARD 17 -->
+                <div class="elevation-card animate-fade-in">
+                    <div class="elevation-img-wrapper">
+                        <img src="i17.webp" alt="Modern Office Setup and Workspace" class="elevation-img" loading="lazy">
+                    </div>
+                    <div class="elevation-info">
+                        <h3>Modern Office Setup</h3>
+                        <div class="card-actions">
+                            <button onclick="openLightbox('i17.webp')" class="btn-card btn-view"><i class="fa-solid fa-eye"></i> View</button>
+                            <a href="https://wa.me/923245301575?text=Hi%20Harry%20Architect..." target="_blank" class="btn-card btn-order"><i class="fa-brands fa-whatsapp"></i> Order</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- CARD 18 -->
+                <div class="elevation-card animate-fade-in">
+                    <div class="elevation-img-wrapper">
+                        <img src="i18.webp" alt="Luxury Apartment Suite Interior" class="elevation-img" loading="lazy">
+                    </div>
+                    <div class="elevation-info">
+                        <h3>Luxury Apartment Suite</h3>
+                        <div class="card-actions">
+                            <button onclick="openLightbox('i18.webp')" class="btn-card btn-view"><i class="fa-solid fa-eye"></i> View</button>
+                            <a href="https://wa.me/923245301575?text=Hi%20Harry%20Architect..." target="_blank" class="btn-card btn-order"><i class="fa-brands fa-whatsapp"></i> Order</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- CARD 19 -->
+                <div class="elevation-card animate-fade-in">
+                    <div class="elevation-img-wrapper">
+                        <img src="i19.webp" alt="Commercial Office Setup Design" class="elevation-img" loading="lazy">
+                    </div>
+                    <div class="elevation-info">
+                        <h3>Office Setup</h3>
+                        <div class="card-actions">
+                            <button onclick="openLightbox('i19.webp')" class="btn-card btn-view"><i class="fa-solid fa-eye"></i> View</button>
+                            <a href="https://wa.me/923245301575?text=Hi%20Harry%20Architect..." target="_blank" class="btn-card btn-order"><i class="fa-brands fa-whatsapp"></i> Order</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- CARD 20 -->
+                <div class="elevation-card animate-fade-in">
+                    <div class="elevation-img-wrapper">
+                        <img src="i20.webp" alt="Modern Kids Bedroom Theme" class="elevation-img" loading="lazy">
+                    </div>
+                    <div class="elevation-info">
+                        <h3>Modern Kids Bedroom</h3>
+                        <div class="card-actions">
+                            <button onclick="openLightbox('i20.webp')" class="btn-card btn-view"><i class="fa-solid fa-eye"></i> View</button>
+                            <a href="https://wa.me/923245301575?text=Hi%20Harry%20Architect..." target="_blank" class="btn-card btn-order"><i class="fa-brands fa-whatsapp"></i> Order</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- FLOATING ACTION BUTTONS -->
+    <div class="floating-container">
+        <a href="https://wa.me/923245301575" target="_blank" class="floating-btn float-whatsapp">
+            <i class="fa-brands fa-whatsapp"></i>
+        </a>
+        <a href="index.html" class="floating-btn float-home">
+            <i class="fa-solid fa-house"></i>
+        </a>
+    </div>
+
+    <!-- FULL SCREEN LIGHTBOX MODAL WITH WATERMARK -->
+    <div class="lightbox-modal" id="lightboxModal" onclick="closeLightboxOutside(event)">
+        <div class="lightbox-wrapper">
+            <div class="lightbox-close" onclick="closeLightbox()">
+                <i class="fa-solid fa-arrow-left"></i> <span>Back</span>
+            </div>
+            <img src="" alt="Full View" id="lightboxImg" class="lightbox-img">
+            <div class="lightbox-watermark">Harry Architect 0324 530 1575</div>
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="container footer-grid">
+            <div class="footer-col">
+                <h3>About Us</h3>
+                <p>Harry architect was established in Pattoki Punjab, Pakistan in 2022. The company grew organically and gained extensive experience in Pakistan. Currently giving services all over Pakistan, Harry architect has accumulated an impressive portfolio of projects that spans the breadth of building genres – from residential, commercial, leisure, retail, and interior design. The years of experience and absolute commitment to quality enhance the reputation as a premier contractor.</p>
+                <div class="social-links">
+                    <a href="https://www.facebook.com/share/1Cnjxv192U/?mibextid=wwXIfr" target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="https://www.instagram.com/harryarchitecture?igsh=MWkxNmxqdWM4bzM0Mw%3D%3D&utm_source=qr" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://www.tiktok.com/@harryarchitect?_r=1&_t=ZS-97PktKCWtDG" target="_blank"><i class="fa-brands fa-tiktok"></i></a>
+                    <a href="https://youtube.com/@harry_architect?si=gAx_jFO3uc8M3Oyh" target="_blank"><i class="fa-brands fa-youtube"></i></a>
+                </div>
+            </div>
+
+            <div class="footer-col">
+                <h3>Company</h3>
+                <div class="footer-links">
+                    <a href="index.html">Home</a>
+                    <a href="about.html">About</a>
+                    <a href="projects.html">Projects</a>
+                    <a href="design-elevation.html">Design & Elevation</a>
+                    <a href="services.html">Services</a>
+                    <a href="packages.html">Packages</a>
+                    <a href="blogs.html">Blogs</a>
+                    <a href="Contact.html">Contact</a>
+                    <a href="privacy-policy.html">Privacy Policy</a>
+                </div>
+            </div>
+
+            <div class="footer-col">
+                <h3>Content Us</h3>
+                <ul class="content-info-list">
+                    <li><i class="fa-solid fa-location-dot"></i> Pattoki, District Kasur</li>
+                    <li><i class="fa-solid fa-phone"></i> +923245301575</li>
+                    <li><i class="fa-solid fa-envelope"></i> Harry846376@gmail.com</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="container copyright-bar">
+            <p>© 2026 Harry Architect | Pakistan's No.1 Architectural & Construction Website. All rights reserved.  |  Update : v2.0</p>
+        </div>
+    </footer>
+
+    <script>
+        // --- MOBILE MENU SCRIPT ---
+        const menuToggle = document.getElementById('menuToggle');
+        const mobileNavbar = document.getElementById('mobileNavbar');
+
+        menuToggle.addEventListener('click', () => {
+            mobileNavbar.classList.toggle('active');
+            const icon = menuToggle.querySelector('i');
+            if (mobileNavbar.classList.contains('active')) {
+                icon.classList.remove('fa-bars');
+                icon.classList.add('fa-xmark');
+            } else {
+                icon.classList.remove('fa-xmark');
+                icon.classList.add('fa-bars');
+            }
+        });
+
+        // --- LIGHTBOX INTERACTION FUNCTIONALITY ---
+        const lightboxModal = document.getElementById('lightboxModal');
+        const lightboxImg = document.getElementById('lightboxImg');
+
+        function openLightbox(imgSrc) {
+            lightboxImg.src = imgSrc;
+            lightboxModal.classList.add('show');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeLightbox() {
+            lightboxModal.classList.remove('show');
+            setTimeout(() => { lightboxImg.src = ''; }, 300);
+            document.body.style.overflow = 'auto';
+        }
+
+        function closeLightboxOutside(event) {
+            if (event.target === lightboxModal) {
+                closeLightbox();
+            }
+        }
+
+        // --- SCROLL ANIMATION INTERSECTION OBSERVER (NEW) ---
+        document.addEventListener('DOMContentLoaded', () => {
+            const animatedElements = document.querySelectorAll('.animate-fade-in');
+            
+            const observerOptions = {
+                root: null,
+                rootMargin: '0px',
+                threshold: 0.15
+            };
+
+            const observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('appear');
+                        observer.unobserve(entry.target); // Element trigger hone ke baad track karna chor dega
+                    }
+                });
+            }, observerOptions);
+
+            animatedElements.forEach(el => observer.observe(el));
+        });
+    </script>
+</body>
+</html>
