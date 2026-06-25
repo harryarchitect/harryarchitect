@@ -1,0 +1,968 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO Meta Tags -->
+    <title>Our Packages | Harry Architect | Pakistan's No.1 Architectural & Construction Website</title>
+    <meta name="description" content="Explore affordable architectural, interior design, and landscaping packages by Harry Architect in Pakistan. Premium quality 2D plans, 3D visualizations, and calculations.">
+    <meta name="keywords" content="Harry Architect, Architectural Packages, Interior Design Pakistan, Landscaping Cost, 3D Front Elevation, Construction Packages Pakistan, Pattoki Architect">
+    <meta name="robots" content="index, follow">
+    <meta property="og:title" content="Our Packages | Harry Architect">
+    <meta property="og:description" content="Affordable and premium design plans for exterior, interior, and landscape projects across Pakistan.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://harryarchitect.com/packages.html">
+    
+    <!-- Favicon Element -->
+    <link rel="icon" type="image/webp" href="logo.webp">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* --- CSS VARIABLES & RESET --- */
+        :root {
+            --primary-bg: #121212;
+            --card-bg: #1e1e1e;
+            --text-color: #F5F5F5;
+            --text-muted: #b3b3b3;
+            --accent-gold: #D4AF37;
+            --accent-bronze: #CD7F32;
+            --font-main: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            text-decoration: none;
+            list-style: none;
+        }
+
+        body {
+            background-color: var(--primary-bg);
+            color: var(--text-color);
+            font-family: var(--font-main);
+            overflow-x: hidden;
+            line-height: 1.6;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        section {
+            padding: 80px 0;
+        }
+
+        /* --- SEO & ACCESSIBILITY HIDDEN ELEMENTS --- */
+        .sr-only {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            border: 0;
+        }
+
+        /* --- ANIMATIONS (SCROLL REVEAL EFFECT) --- */
+        .reveal-element {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+        }
+
+        .reveal-element.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* --- HEADER & NAVBAR --- */
+        header {
+            background-color: rgba(18, 18, 18, 0.95);
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            border-bottom: 1px solid rgba(212, 175, 55, 0.1);
+            backdrop-filter: blur(10px);
+        }
+
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 80px;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--accent-gold);
+        }
+
+        .navbar {
+            display: flex;
+            gap: 15px;
+        }
+
+        .nav-link {
+            color: var(--text-color);
+            font-size: 0.95rem;
+            font-weight: 500;
+            padding: 8px 12px;
+            border-radius: 4px;
+            transition: all 0.3s ease;
+        }
+
+        .nav-link:hover, .nav-link.active {
+            color: var(--accent-gold);
+            background-color: rgba(212, 175, 55, 0.1);
+        }
+
+        .menu-btn {
+            display: none;
+            color: var(--text-color);
+            font-size: 1.5rem;
+            cursor: pointer;
+            z-index: 1001;
+        }
+
+        /* --- HERO SECTION --- */
+        .packages-hero {
+            position: relative;
+            height: 45vh;
+            min-height: 350px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            background: url('img019.webp') no-repeat center center/cover;
+            padding-top: 80px;
+        }
+
+        .hero-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to bottom, rgba(18, 18, 18, 0.7), rgba(18, 18, 18, 0.9));
+            z-index: 1;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero-content h1 {
+            font-size: 3.5rem;
+            color: var(--accent-gold);
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+
+        .hero-content p {
+            font-size: 1.2rem;
+            color: var(--text-muted);
+        }
+
+        .hero-content p a {
+            color: var(--accent-gold);
+        }
+
+        /* --- MAIN LAYOUT STRUCTURE --- */
+        .packages-main-grid {
+            display: grid;
+            grid-template-columns: 2.8fr 1.2fr;
+            gap: 40px;
+            align-items: start;
+        }
+
+        /* --- PACKAGES CARDS --- */
+        .packages-holder {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+        }
+
+        .pkg-card {
+            background-color: var(--card-bg);
+            border-radius: 10px;
+            border: 1px solid rgba(255, 255, 255, 0.03);
+            padding: 30px;
+            transition: transform 0.3s, border-color 0.3s;
+            position: relative;
+        }
+
+        .pkg-card:hover {
+            transform: translateY(-3px);
+            border-color: rgba(212, 175, 55, 0.2);
+        }
+
+        /* Highlighted Package Style */
+        .pkg-card.highlighted-pkg {
+            border: 2px solid var(--accent-gold);
+            box-shadow: 0 10px 30px rgba(212, 175, 55, 0.15);
+            background: linear-gradient(145deg, #242424, #1e1e1e);
+        }
+
+        .badge-recommended {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background-color: var(--accent-gold);
+            color: var(--primary-bg);
+            padding: 6px 16px;
+            font-size: 0.85rem;
+            font-weight: bold;
+            text-transform: uppercase;
+            border-radius: 20px;
+            letter-spacing: 1px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+        }
+
+        .pkg-header {
+            border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+            padding-bottom: 15px;
+            margin-bottom: 20px;
+        }
+
+        .pkg-title {
+            font-size: 1.6rem;
+            color: var(--accent-gold);
+            font-weight: 700;
+        }
+
+        .pkg-subheading {
+            font-size: 1.1rem;
+            color: var(--text-color);
+            margin: 10px 0 5px 0;
+            font-weight: 600;
+            border-bottom: 1px dashed rgba(212, 175, 55, 0.2);
+            padding-bottom: 3px;
+        }
+
+        /* Features List Styling */
+        .pkg-features {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+            gap: 12px;
+            margin-bottom: 25px;
+        }
+
+        .pkg-features li {
+            font-size: 0.95rem;
+            color: var(--text-muted);
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+        }
+
+        .pkg-features i {
+            color: #25D366;
+            margin-top: 4px;
+            font-size: 0.9rem;
+        }
+
+        /* Price tag elements */
+        .pkg-footer-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 15px;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .price-box {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .rate-original {
+            font-size: 0.9rem;
+            color: var(--text-muted);
+            text-decoration: line-through;
+        }
+
+        .rate-discount {
+            font-size: 1.4rem;
+            color: var(--text-color);
+            font-weight: bold;
+        }
+
+        .rate-discount span {
+            color: var(--accent-gold);
+        }
+
+        .pkg-btn {
+            background-color: transparent;
+            border: 1px solid var(--accent-gold);
+            color: var(--accent-gold);
+            padding: 10px 20px;
+            font-size: 0.95rem;
+            border-radius: 5px;
+            font-weight: 600;
+            transition: all 0.3s;
+        }
+
+        .pkg-btn:hover {
+            background-color: var(--accent-gold);
+            color: var(--primary-bg);
+        }
+
+        .pkg-card.highlighted-pkg .pkg-btn {
+            background-color: var(--accent-gold);
+            color: var(--primary-bg);
+        }
+
+        .pkg-card.highlighted-pkg .pkg-btn:hover {
+            background-color: transparent;
+            color: var(--accent-gold);
+        }
+
+        /* --- SIDEBAR CONTAINERS --- */
+        .sidebar-container {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            position: sticky;
+            top: 110px;
+        }
+
+        .sidebar-notice-box {
+            background-color: var(--card-bg);
+            padding: 22px;
+            border-radius: 8px;
+            border-left: 4px solid var(--accent-gold);
+            box-shadow: 0 5px 20px rgba(0,0,0,0.15);
+        }
+
+        .sidebar-notice-box h4 {
+            font-size: 1.05rem;
+            color: var(--accent-gold);
+            margin-bottom: 8px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .sidebar-notice-box p {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            line-height: 1.5;
+        }
+
+        /* --- DUAL FLOATING ACTIONS BUTTONS --- */
+        .floating-actions-wrapper {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            z-index: 9999;
+        }
+
+        .floating-btn {
+            width: 55px;
+            height: 55px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            color: #ffffff;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.4);
+            transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            cursor: pointer;
+        }
+
+        .floating-btn:hover {
+            transform: translateY(-5px) scale(1.05);
+        }
+
+        .floating-whatsapp {
+            background-color: #25D366;
+        }
+
+        .floating-home {
+            background-color: var(--accent-gold);
+            color: var(--primary-bg);
+        }
+
+        /* --- FOOTER --- */
+        footer {
+            background-color: #0c0c0c;
+            padding: 70px 0 20px 0;
+            border-top: 1px solid rgba(212, 175, 55, 0.1);
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr;
+            gap: 50px;
+            margin-bottom: 5px;
+        }
+
+        .footer-col h3 {
+            color: var(--accent-gold);
+            font-size: 1.3rem;
+            margin-bottom: 25px;
+        }
+
+        .footer-col p {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            margin-bottom: 20px;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 15px;
+        }
+
+        .social-links a {
+            width: 40px;
+            height: 40px;
+            background-color: var(--card-bg);
+            color: var(--text-color);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            font-size: 1.1rem;
+            transition: all 0.3s;
+        }
+
+        .social-links a:hover {
+            background-color: var(--accent-gold);
+            color: var(--primary-bg);
+            transform: translateY(-3px);
+        }
+
+        .footer-links {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 12px;
+        }
+
+        .footer-links a {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            transition: color 0.3s;
+        }
+
+        .footer-links a:hover {
+            color: var(--accent-gold);
+        }
+
+        .content-info-list {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .content-info-list li {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            color: var(--text-muted);
+            font-size: 0.95rem;
+        }
+
+        .content-info-list i {
+            color: var(--accent-gold);
+            font-size: 1.1rem;
+            width: 20px;
+        }
+
+        .copyright-bar {
+            text-align: center;
+            padding-top: 30px;
+            margin-top: 40px;
+            border-top: 1px solid rgba(255,255,255,0.05);
+            font-size: 0.9rem;
+            color: var(--text-muted);
+        }
+
+        /* --- RESPONSIVE MEDIA QUERIES --- */
+        @media (max-width: 992px) {
+            .navbar {
+                display: flex;
+                flex-direction: column;
+                position: absolute;
+                top: 80px;
+                left: -100%;
+                width: 100%;
+                background-color: rgba(18, 18, 18, 0.98);
+                padding: 20px 5%;
+                gap: 10px;
+                border-bottom: 1px solid rgba(212, 175, 55, 0.2);
+                transition: left 0.4s ease;
+                backdrop-filter: blur(15px);
+            }
+
+            .navbar.active {
+                left: 0;
+            }
+            
+            .menu-btn {
+                display: block;
+            }
+
+            .packages-main-grid {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+
+            .sidebar-container {
+                position: static;
+                width: 100%;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+            
+            .badge-recommended {
+                position: static;
+                display: inline-block;
+                margin-top: 10px;
+                margin-bottom: 10px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .hero-content h1 {
+                font-size: 2.5rem;
+            }
+            .pkg-features {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- NAVBAR SECTION -->
+    <header>
+        <div class="container nav-container">
+            <a href="index.html" class="logo">
+                <i class="fa-solid fa-compass-drafting"></i> Harry Architect
+            </a>
+            <nav>
+                <span class="sr-only">Main Navigation</span>
+                <ul class="navbar" id="mobileNavbar">
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="about.html" class="nav-link">About</a></li>
+                    <li><a href="projects.html" class="nav-link">Projects</a></li>
+                    <li><a href="design-elevation.html" class="nav-link">Design&Elevation</a></li>
+                    <li><a href="services.html" class="nav-link">Services</a></li>
+                    <li><a href="packages.html" class="nav-link active">Packages</a></li>
+                    <li><a href="blogs.html" class="nav-link">Blogs</a></li>
+                    <li><a href="Contact.html" class="nav-link">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="menu-btn" id="menuToggle" aria-label="Toggle Menu"><i class="fa-solid fa-bars"></i></div>
+        </div>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section class="packages-hero">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1>Our Packages</h1>
+            <p><a href="index.html">Home</a> | Packages</p>
+        </div>
+    </section>
+
+    <!-- MAIN PACKAGES DISPLAY GRID -->
+    <section>
+        <div class="container packages-main-grid">
+            
+            <!-- Left Side Content: Big Bar (9 Packages) -->
+            <div class="packages-holder">
+                
+                <!-- Package 1 -->
+                <div class="pkg-card reveal-element">
+                    <div class="pkg-header">
+                        <h2 class="pkg-title">1. Exterior Basic Package</h2>
+                    </div>
+                    <ul class="pkg-features">
+                        <li><i class="fa-solid fa-circle-check"></i> 2D Floor plan</li>
+                        <li><i class="fa-solid fa-circle-check"></i> Doors and windows Schedule</li>
+                        <li><i class="fa-solid fa-circle-check"></i> Floor Plan Details</li>
+                        <li><i class="fa-solid fa-circle-check"></i> PDF File</li>
+                    </ul>
+                    <div class="pkg-footer-row">
+                        <div class="price-box">
+                            <span class="rate-original">Rate: RS 4/- Per SQFT</span>
+                            <span class="rate-discount">Discount: <span>RS 3.4/-</span> Per SQFT</span>
+                        </div>
+                        <a href="https://wa.me/923245301575?text=Hi%20Harry%20Architect,%20I%20want%20to%20order%20the%20Exterior%20Basic%20Package." target="_blank" class="pkg-btn">Order Now</a>
+                    </div>
+                </div>
+
+                <!-- Package 2 -->
+                <div class="pkg-card reveal-element">
+                    <div class="pkg-header">
+                        <h2 class="pkg-title">2. Exterior Standard Package</h2>
+                    </div>
+                    <ul class="pkg-features">
+                        <li><i class="fa-solid fa-circle-check"></i> 2D Floor plan</li>
+                        <li><i class="fa-solid fa-circle-check"></i> Doors and windows Schedule</li>
+                        <li><i class="fa-solid fa-circle-check"></i> Floor Plan Details</li>
+                        <li><i class="fa-solid fa-circle-check"></i> Furniture Layout drawings</li>
+                        <li><i class="fa-solid fa-circle-check"></i> Electric pointing drawings</li>
+                        <li><i class="fa-solid fa-circle-check"></i> Electrical layout drawings</li>
+                        <li><i class="fa-solid fa-circle-check"></i> Plumbing Drawing</li>
+                        <li><i class="fa-solid fa-circle-check"></i> PDF File</li>
+                    </ul>
+                    <div class="pkg-footer-row">
+                        <div class="price-box">
+                            <span class="rate-original">Rate: RS 8.8/- Per SQFT</span>
+                            <span class="rate-discount">Discount: <span>RS 7.4/-</span> Per SQFT</span>
+                        </div>
+                        <a href="https://wa.me/923245301575?text=Hi%20Harry%20Architect,%20I%20want%20to%20order%20the%20Exterior%20Standard%20Package." target="_blank" class="pkg-btn">Order Now</a>
+                    </div>
+                </div>
+
+                <!-- Package 3 -->
+                <div class="pkg-card reveal-element">
+                    <div class="pkg-header">
+                        <h2 class="pkg-title">3. Exterior Premium Package</h2>
+                    </div>
+                    <ul class="pkg-features">
+                        <li><i class="fa-solid fa-circle-check"></i> 3D Front Elevation</li>
+                        <li><i class="fa-solid fa-circle-check"></i> 2 Render Elevation</li>
+                        <li><i class="fa-solid fa-circle-check"></i> Elevation animation</li>
+                        <li><i class="fa-solid fa-circle-check"></i> 2D Elevation Details</li>
+                        <li><i class="fa-solid fa-circle-check"></i> 2D Floor plan</li>
+                        <li><i class="fa-solid fa-circle-check"></i> Doors and windows Schedule</li>
+                        <li><i class="fa-solid fa-circle-check"></i> Floor Plan Details</li>
+                        <li><i class="fa-solid fa-circle-check"></i> Top Roof Plan</li>
+                        <li><i class="fa-solid fa-circle-check"></i> Section Details</li>
+                        <li><i class="fa-solid fa-circle-check"></i> Furniture Layout drawings</li>
+                        <li><i class="fa-solid fa-circle-check"></i> Electric pointing drawings</li>
+                        <li><i class="fa-solid fa-circle-check"></i> Electric layout drawings</li>
+                        <li><i class="fa-solid fa-circle-check"></i> Plumbing Drawings</li>
+                        <li><i class="fa-solid fa-circle-check"></i> Excavation Plan</li>
+                        <li><i class="fa-solid fa-circle-check"></i> Drainage Plan</li>
+                        <li><i class="fa-solid fa-circle-check"></i> Foundation Details</li>
+                        <li><i class="fa-solid fa-circle-check"></i> Working Files</li>
+                        <li><i class="fa-solid fa-circle-check"></i> O.H.W Tank Details</li>
+                        <li><i class="fa-solid fa-circle-check"></i> U.G.H Tank Details</li>
+                        <li><i class="fa-solid fa-circle-check"></i> Septic Tank Details</li>
+                        <li><i class="fa-solid fa-circle-check"></i> PDF File</li>
+                    </ul>
+                    <div class="pkg-footer-row">
+                        <div class="price-box">
+                            <span class="rate-original">Rate: RS 15.5/- Per SQFT</span>
+                            <span class="rate-discount">Discount: <span>RS 13.2/-</span> Per SQFT</span>
+                        </div>
+                        <a href="https://wa.me/923245301575?text=Hi%20Harry%20Architect,%20I%20want%20to%20order%20the%20Exterior%20Premium%20Package." target="_blank" class="pkg-btn">Order Now</a>
+                    </div>
+                </div>
+
+                <!-- Package 4 (HIGHLIGHTED / RECOMMENDED) -->
+                <div class="pkg-card highlighted-pkg reveal-element">
+                    <div class="badge-recommended"><i class="fa-solid fa-star"></i> Recommended</div>
+                    <div class="pkg-header">
+                        <h2 class="pkg-title">4. Exterior + Interior Premium Package</h2>
+                    </div>
+                    
+                    <div class="pkg-subheading">Exterior</div>
+                    <ul class="pkg-features">
+                        <li><i class="fa-solid fa-circle-check"></i> 3D Front Elevation</li>
+                        <li><i class="fa-solid fa-circle-check"></i> 2 Render Elevation</li>
+                        <li><i class="fa-solid fa-circle-check"></i> Elevation animation</li>
+                        <li><i class="fa-solid fa-circle-check"></i> 2D Elevation Details</li>
+                        <li><i class="fa-solid fa-circle-check"></i> 2D Floor plan</li>
+                        <li><i class="fa-solid fa-circle-check"></i> Doors and windows Schedule</li>
+                        <li><i class="fa-solid fa-circle-check"></i> Floor Plan Details</li>
+                        <li><i class="fa-solid fa-circle-check"></i> Top Roof Plan</li>
+                        <li><i class="fa-solid fa-circle-check"></i> Section Details</li>
+                        <li><i class="fa-solid fa-circle-check"></i> Furniture Layout drawings</li>
+                        <li><i class="fa-solid fa-circle-check"></i> Electric pointing drawings</li>
+                        <li><i class="fa-solid fa-circle-check"></i> Electric layout drawings</li>
+                        <li><i class="fa-solid fa-circle-check"></i> Plumbing Drawings</li>
+                        <li><i class="fa-solid fa-circle-check"></i> Excavation Plan</li>
+                        <li><i class="fa-solid fa-circle-check"></i> Drainage Plan</li>
+                        <li><i class="fa-solid fa-circle-check"></i> Foundation Details</li>
+                        <li><i class="fa-solid fa-circle-check"></i> Working Files</li>
+                        <li><i class="fa-solid fa-circle-check"></i> O.H.W Tank Details</li>
+                        <li><i class="fa-solid fa-circle-check"></i> U.G.H Tank Details</li>
+                        <li><i class="fa-solid fa-circle-check"></i> Septic Tank Details</li>
+                        <li><i class="fa-solid fa-circle-check"></i> PDF File</li>
+                    </ul>
+
+                    <div class="pkg-subheading">Interior</div>
+                    <ul class="pkg-features">
+                        <li><i class="fa-solid fa-circle-check"></i> All wall render</li>
+                        <li><i class="fa-solid fa-circle-check"></i> animation video</li>
+                        <li><i class="fa-solid fa-circle-check"></i> each and every thing details</li>
+                        <li><i class="fa-solid fa-circle-check"></i> working Drawings</li>
+                        <li><i class="fa-solid fa-circle-check"></i> paint Code</li>
+                        <li><i class="fa-solid fa-circle-check"></i> Material Details</li>
+                        <li><i class="fa-solid fa-circle-check"></i> Pdf File</li>
+                    </ul>
+
+                    <div class="pkg-footer-row">
+                        <div class="price-box">
+                            <span class="rate-original">Rate: RS 31.1/- Per SQFT</span>
+                            <span class="rate-discount">Discount: <span>RS 26.4/-</span> Per SQFT</span>
+                        </div>
+                        <a href="https://wa.me/923245301575?text=Hi%20Harry%20Architect,%20I%20want%20to%20order%20the%20Exterior%20%2B%20Interior%20Premium%20Package." target="_blank" class="pkg-btn">Order Now</a>
+                    </div>
+                </div>
+
+                <!-- Package 5 -->
+                <div class="pkg-card reveal-element">
+                    <div class="pkg-header">
+                        <h2 class="pkg-title">5. Basic Interior Package</h2>
+                    </div>
+                    <ul class="pkg-features">
+                        <li><i class="fa-solid fa-circle-check"></i> all wall render</li>
+                        <li><i class="fa-solid fa-circle-check"></i> animation video</li>
+                        <li><i class="fa-solid fa-circle-check"></i> Pdf File</li>
+                    </ul>
+                    <div class="pkg-footer-row">
+                        <div class="price-box">
+                            <span class="rate-original">Rate: RS 15.5/- Per SQFT</span>
+                            <span class="rate-discount">Discount: <span>RS 13.2/-</span> Per SQFT</span>
+                        </div>
+                        <a href="https://wa.me/923245301575?text=Hi%20Harry%20Architect,%20I%20want%20to%20order%20the%20Basic%20Interior%20Package." target="_blank" class="pkg-btn">Order Now</a>
+                    </div>
+                </div>
+
+                <!-- Package 6 -->
+                <div class="pkg-card reveal-element">
+                    <div class="pkg-header">
+                        <h2 class="pkg-title">6. Interior Premium Package</h2>
+                    </div>
+                    <ul class="pkg-features">
+                        <li><i class="fa-solid fa-circle-check"></i> All wall render</li>
+                        <li><i class="fa-solid fa-circle-check"></i> animation video</li>
+                        <li><i class="fa-solid fa-circle-check"></i> each and every thing details</li>
+                        <li><i class="fa-solid fa-circle-check"></i> working Drawings</li>
+                        <li><i class="fa-solid fa-circle-check"></i> paint Code</li>
+                        <li><i class="fa-solid fa-circle-check"></i> Material Details</li>
+                        <li><i class="fa-solid fa-circle-check"></i> Pdf File</li>
+                    </ul>
+                    <div class="pkg-footer-row">
+                        <div class="price-box">
+                            <span class="rate-original">Rate: RS 22.2/- Per SQFT</span>
+                            <span class="rate-discount">Discount: <span>RS 18.8/-</span> Per SQFT</span>
+                        </div>
+                        <a href="https://wa.me/923245301575?text=Hi%20Harry%20Architect,%20I%20want%20to%20order%20the%20Interior%20Premium%20Package." target="_blank" class="pkg-btn">Order Now</a>
+                    </div>
+                </div>
+
+                <!-- Package 7 -->
+                <div class="pkg-card reveal-element">
+                    <div class="pkg-header">
+                        <h2 class="pkg-title">7. Basic Landscape Package</h2>
+                    </div>
+                    <ul class="pkg-features">
+                        <li><i class="fa-solid fa-circle-check"></i> Site Analysis</li>
+                        <li><i class="fa-solid fa-circle-check"></i> 2D Landscape Layout Plan</li>
+                        <li><i class="fa-solid fa-circle-check"></i> Planting Suggestions</li>
+                        <li><i class="fa-solid fa-circle-check"></i> Pathway Layout</li>
+                        <li><i class="fa-solid fa-circle-check"></i> 2 Revisions</li>
+                        <li><i class="fa-solid fa-circle-check"></i> Delivery: 3–5 Days</li>
+                    </ul>
+                    <div class="pkg-footer-row">
+                        <div class="price-box">
+                            <span class="rate-original">Rate: RS 4/- Per SQFT</span>
+                            <span class="rate-discount">Discount: <span>RS 3.4/-</span> Per SQFT</span>
+                        </div>
+                        <a href="https://wa.me/923245301575?text=Hi%20Harry%20Architect,%20I%20want%20to%20order%20the%20Basic%20Landscape%20Package." target="_blank" class="pkg-btn">Order Now</a>
+                    </div>
+                </div>
+
+                <!-- Package 8 -->
+                <div class="pkg-card reveal-element">
+                    <div class="pkg-header">
+                        <h2 class="pkg-title">8. Standard Landscape Package</h2>
+                    </div>
+                    <ul class="pkg-features">
+                        <li><i class="fa-solid fa-circle-check"></i> Complete 2D Landscape Plan</li>
+                        <li><i class="fa-solid fa-circle-check"></i> 3D Landscape Design</li>
+                        <li><i class="fa-solid fa-circle-check"></i> Garden & Lawn Design</li>
+                        <li><i class="fa-solid fa-circle-check"></i> Plant Selection</li>
+                        <li><i class="fa-solid fa-circle-check"></i> Hardscape Elements (Pathways, Seating Areas)</li>
+                        <li><i class="fa-solid fa-circle-check"></i> 3 Revisions</li>
+                        <li><i class="fa-solid fa-circle-check"></i> Delivery: 5–7 Days</li>
+                    </ul>
+                    <div class="pkg-footer-row">
+                        <div class="price-box">
+                            <span class="rate-original">Rate: RS 8.8/- Per SQFT</span>
+                            <span class="rate-discount">Discount: <span>RS 7.4/-</span> Per SQFT</span>
+                        </div>
+                        <a href="https://wa.me/923245301575?text=Hi%20Harry%20Architect,%20I%20want%20to%20order%20the%20Standard%20Landscape%20Package." target="_blank" class="pkg-btn">Order Now</a>
+                    </div>
+                </div>
+
+                <!-- Package 9 -->
+                <div class="pkg-card reveal-element">
+                    <div class="pkg-header">
+                        <h2 class="pkg-title">9. Premium Landscape Package</h2>
+                    </div>
+                    <ul class="pkg-features">
+                        <li><i class="fa-solid fa-circle-check"></i> Complete Landscape Master Plan</li>
+                        <li><i class="fa-solid fa-circle-check"></i> Detailed 3D Visualization</li>
+                        <li><i class="fa-solid fa-circle-check"></i> 4K Render Images (4–6 Views)</li>
+                        <li><i class="fa-solid fa-circle-check"></i> Garden, Lawn & Water Feature Design</li>
+                        <li><i class="fa-solid fa-circle-check"></i> Outdoor Seating & Pergola Design</li>
+                        <li><i class="fa-solid fa-circle-check"></i> Lighting Layout</li>
+                        <li><i class="fa-solid fa-circle-check"></i> Unlimited Minor Revisions</li>
+                        <li><i class="fa-solid fa-circle-check"></i> Delivery: 7–10 Days</li>
+                    </ul>
+                    <div class="pkg-footer-row">
+                        <div class="price-box">
+                            <span class="rate-original">Rate: RS 15.5/- Per SQFT</span>
+                            <span class="rate-discount">Discount: <span>RS 13.2/-</span> Per SQFT</span>
+                        </div>
+                        <a href="https://wa.me/923245301575?text=Hi%20Harry%20Architect,%20I%20want%20to%20order%20the%20Premium%20Landscape%20Package." target="_blank" class="pkg-btn">Order Now</a>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Right Side (Small Sidebar Bar - 4 Boxes) -->
+            <div class="sidebar-container">
+                
+                <!-- Box 1 -->
+                <div class="sidebar-notice-box reveal-element">
+                    <h4><i class="fa-solid fa-triangle-exclamation"></i> Site Visit Charges</h4>
+                    <p>Not included in the package price and will be charged separately based on project location.</p>
+                </div>
+
+                <!-- Box 2 -->
+                <div class="sidebar-notice-box reveal-element">
+                    <h4><i class="fa-solid fa-file-shield"></i> Submission & Approval File</h4>
+                    <p>Not included in the package price and will be charged separately as per project requirements and authority regulations.</p>
+                </div>
+
+                <!-- Box 3 -->
+                <div class="sidebar-notice-box reveal-element">
+                    <h4><i class="fa-solid fa-print"></i> Printing Charges</h4>
+                    <p>Not included in package price. Will be charged separately according to drawing size and quantity.</p>
+                </div>
+
+                <!-- Box 4 -->
+                <div class="sidebar-notice-box reveal-element">
+                    <h4><i class="fa-solid fa-truck"></i> Delivery Costs</h4>
+                    <p>Not included in package price. Delivery cost will be calculated based on location and courier service.</p>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- FOOTER SECTION -->
+    <footer>
+        <div class="container footer-grid">
+            <div class="footer-col">
+                <h3>About Us</h3>
+                <p>Harry architect was established in Pattoki Punjab, Pakistan in 2022. The company grew organically and gained extensive experience in Pakistan. Currently giving services all over Pakistan, Harry architect has accumulated an impressive portfolio of projects that spans the breadth of building genres – from residential, commercial, leisure, retail, and interior design. The years of experience and absolute commitment to quality enhance the reputation as a premier contractor.</p>
+                <div class="social-links">
+                    <a href="https://www.facebook.com/share/1Cnjxv192U/?mibextid=wwXIfr" target="_blank" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="https://www.instagram.com/harryarchitecture?igsh=MWkxNmxqdWM4bzM0Mw%3D%3D&utm_source=qr" target="_blank" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://www.tiktok.com/@harryarchitect?_r=1&_t=ZS-97PktKCWtDG" target="_blank" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+                    <a href="https://youtube.com/@harry_architect?si=gAx_jFO3uc8M3Oyh" target="_blank" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+                </div>
+            </div>
+
+            <div class="footer-col">
+                <h3>Company</h3>
+                <div class="footer-links">
+                    <a href="index.html">Home</a>
+                    <a href="about.html">About</a>
+                    <a href="projects.html">Projects</a>
+                    <a href="design-elevation.html">Design & Elevation</a>
+                    <a href="services.html">Services</a>
+                    <a href="packages.html">Packages</a>
+                    <a href="blogs.html">Blogs</a>
+                    <a href="Contact.html">Contact</a>
+                    <a href="privacy-policy.html">Privacy Policy</a>
+                </div>
+            </div>
+
+            <div class="footer-col">
+                <h3>Content Us</h3>
+                <ul class="content-info-list">
+                    <li><i class="fa-solid fa-location-dot"></i> Pattoki, District Kasur</li>
+                    <li><i class="fa-solid fa-phone"></i> +923245301575</li>
+                    <li><i class="fa-solid fa-envelope"></i> Harry846376@gmail.com</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="container copyright-bar">
+            <p>© 2026 Harry Architect | Pakistan's No.1 Architectural & Construction Website. All rights reserved. | Update : v2.0</p>
+        </div>
+    </footer>
+
+    <!-- DUAL FLOATING ACTIONS BUTTONS -->
+    <div class="floating-actions-wrapper">
+        <a href="https://wa.me/923245301575?text=Hi%20Harry%20Architect,%20I%20have%20an%20inquiry%20about%20your%20packages." target="_blank" class="floating-btn floating-whatsapp" title="Chat on WhatsApp">
+            <i class="fa-brands fa-whatsapp"></i>
+        </a>
+        <a href="index.html" class="floating-btn floating-home" title="Go to Home">
+            <i class="fa-solid fa-house"></i>
+        </a>
+    </div>
+
+    <!-- JAVASCRIPT BLOCK -->
+    <script>
+        // Mobile Menu Toggle Logic
+        const menuToggle = document.getElementById('menuToggle');
+        const mobileNavbar = document.getElementById('mobileNavbar');
+
+        menuToggle.addEventListener('click', () => {
+            mobileNavbar.classList.toggle('active');
+            const icon = menuToggle.querySelector('i');
+            if (mobileNavbar.classList.contains('active')) {
+                icon.classList.remove('fa-bars');
+                icon.classList.add('fa-xmark');
+            } else {
+                icon.classList.remove('fa-xmark');
+                icon.classList.add('fa-bars');
+            }
+        });
+
+        // CSS Scroll Reveal Animation Engine
+        const revealElements = document.querySelectorAll('.reveal-element');
+        
+        const elementRevealObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if(entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    elementRevealObserver.unobserve(entry.target); // Animates once on layout load
+                }
+            });
+        }, {
+            threshold: 0.08,
+            rootMargin: "0px 0px -40px 0px"
+        });
+
+        revealElements.forEach(element => {
+            elementRevealObserver.observe(element);
+        });
+    </script>
+</body>
+</html>

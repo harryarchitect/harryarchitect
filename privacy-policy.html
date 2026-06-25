@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- --- SEO META TAGS --- -->
+    <title>Privacy Policy | Harry Architect</title>
+    <meta name="description" content="Read the Privacy Policy of Harry Architect. Learn how Pakistan's No.1 architectural and construction firm protects your project requirements, layouts, and personal data.">
+    <meta name="keywords" content="Harry Architect Privacy Policy, Architecture Pakistan, Construction Website, House Design Map, 3D Elevation Pattoki">
+    <meta name="robots" content="index, follow">
+    <meta property="og:title" content="Privacy Policy | Harry Architect">
+    <meta property="og:description" content="Learn how we protect your personal architectural blueprints and client details.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://harryarchitect.com/privacy-policy.html">
+    
+    <!-- --- FAVICON --- -->
+    <link rel="icon" type="image/webp" href="logo.webp">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* --- CSS VARIABLES & RESET --- */
+        :root {
+            --primary-bg: #121212;
+            --card-bg: #1e1e1e;
+            --text-color: #F5F5F5;
+            --text-muted: #b3b3b3;
+            --accent-gold: #D4AF37;
+            --font-main: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            text-decoration: none;
+            list-style: none;
+        }
+
+        body {
+            background-color: var(--primary-bg);
+            color: var(--text-color);
+            font-family: var(--font-main);
+            overflow-x: hidden;
+            line-height: 1.7;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        section {
+            padding: 60px 0 80px 0;
+        }
+
+        /* --- HEADER & NAVBAR --- */
+        header {
+            background-color: rgba(18, 18, 18, 0.95);
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            border-bottom: 1px solid rgba(212, 175, 55, 0.1);
+            backdrop-filter: blur(10px);
+            animation: slideDown 0.6s ease-out;
+        }
+
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 80px;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--accent-gold);
+        }
+
+        .navbar {
+            display: flex;
+            gap: 15px;
+        }
+
+        .nav-link {
+            color: var(--text-color);
+            font-size: 0.95rem;
+            font-weight: 500;
+            padding: 8px 12px;
+            border-radius: 4px;
+            transition: all 0.3s ease;
+        }
+
+        .nav-link:hover, .nav-link.active {
+            color: var(--accent-gold);
+            background-color: rgba(212, 175, 55, 0.1);
+        }
+
+        .menu-btn {
+            display: none;
+            color: var(--text-color);
+            font-size: 1.5rem;
+            cursor: pointer;
+            z-index: 1001;
+        }
+
+        /* --- HERO BANNER --- */
+        .page-banner {
+            background: linear-gradient(rgba(18, 18, 18, 0.85), rgba(18, 18, 18, 0.95)), url('img001.webp') center/cover;
+            padding: 160px 0 60px 0;
+            text-align: center;
+            border-bottom: 1px solid rgba(212, 175, 55, 0.1);
+        }
+
+        .page-banner h1 {
+            font-size: 3rem;
+            color: var(--accent-gold);
+            margin-bottom: 10px;
+            animation: fadeInUp 0.8s ease-out;
+        }
+
+        .page-banner p {
+            color: var(--text-muted);
+            font-size: 1.1rem;
+            animation: fadeInUp 1s ease-out;
+        }
+
+        /* --- PRIVACY CONTENT WRAPPER --- */
+        .policy-wrapper {
+            max-width: 900px;
+            margin: 0 auto;
+            background-color: var(--card-bg);
+            padding: 40px;
+            border-radius: 10px;
+            border: 1px solid rgba(212, 175, 55, 0.1);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            animation: fadeInUp 1.2s ease-out;
+        }
+
+        .policy-section {
+            margin-bottom: 35px;
+        }
+
+        .policy-section h2 {
+            font-size: 1.5rem;
+            color: var(--accent-gold);
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+            padding-bottom: 8px;
+        }
+
+        .policy-section h2 i {
+            font-size: 1.2rem;
+            transition: transform 0.3s ease;
+        }
+
+        .policy-section:hover h2 i {
+            transform: rotate(15deg) scale(1.1);
+        }
+
+        .policy-section p {
+            color: var(--text-muted);
+            font-size: 1.02rem;
+            text-align: justify;
+            margin-bottom: 15px;
+        }
+
+        .policy-section ul {
+            margin-left: 20px;
+            margin-top: 10px;
+        }
+
+        .policy-section ul li {
+            color: var(--text-muted);
+            font-size: 0.98rem;
+            margin-bottom: 10px;
+            position: relative;
+            padding-left: 15px;
+        }
+
+        .policy-section ul li::before {
+            content: "•";
+            color: var(--accent-gold);
+            font-weight: bold;
+            font-size: 1.2rem;
+            position: absolute;
+            left: 0;
+            top: -2px;
+        }
+
+        /* --- FLOATING ACTIONS --- */
+        .floating-container {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            z-index: 999;
+        }
+
+        .floating-btn {
+            width: 55px;
+            height: 55px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.6rem;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+            transition: all 0.3s;
+        }
+
+        .float-whatsapp { background-color: #25D366; color: white; }
+        .float-home { background-color: var(--accent-gold); color: #111111; }
+        .floating-btn:hover { transform: scale(1.08) translateY(-3px); }
+
+        /* --- FOOTER --- */
+        footer {
+            background-color: #0c0c0c;
+            padding: 70px 0 20px 0;
+            border-top: 1px solid rgba(212, 175, 55, 0.1);
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr;
+            gap: 50px;
+            margin-bottom: 5px;
+        }
+
+        .footer-col h3 {
+            color: var(--accent-gold);
+            font-size: 1.3rem;
+            margin-bottom: 25px;
+        }
+
+        .footer-col p {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            margin-bottom: 20px;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 15px;
+        }
+
+        .social-links a {
+            width: 40px;
+            height: 40px;
+            background-color: var(--card-bg);
+            color: var(--text-color);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            font-size: 1.1rem;
+            transition: all 0.3s;
+        }
+
+        .social-links a:hover {
+            background-color: var(--accent-gold);
+            color: var(--primary-bg);
+            transform: translateY(-3px);
+        }
+
+        .footer-links {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 12px;
+        }
+
+        .footer-links a {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            transition: color 0.3s;
+        }
+
+        .footer-links a:hover {
+            color: var(--accent-gold);
+        }
+
+        .content-info-list {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .content-info-list li {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            color: var(--text-muted);
+            font-size: 0.95rem;
+        }
+
+        .content-info-list i {
+            color: var(--accent-gold);
+            font-size: 1.1rem;
+            width: 20px;
+        }
+
+        .copyright-bar {
+            text-align: center;
+            padding-top: 30px;
+            margin-top: 40px;
+            border-top: 1px solid rgba(255,255,255,0.05);
+            font-size: 0.9rem;
+            color: var(--text-muted);
+        }
+
+        /* --- KEYFRAMES FOR ANIMATIONS --- */
+        @keyframes slideDown {
+            from { transform: translateY(-100%); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+
+        @keyframes fadeInUp {
+            from { transform: translateY(30px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+
+        /* --- RESPONSIVE MEDIA QUERIES --- */
+        @media (max-width: 992px) {
+            .navbar {
+                display: flex;
+                flex-direction: column;
+                position: absolute;
+                top: 80px;
+                left: -100%;
+                width: 100%;
+                background-color: rgba(18, 18, 18, 0.98);
+                padding: 20px 5%;
+                gap: 10px;
+                border-bottom: 1px solid rgba(212, 175, 55, 0.2);
+                transition: left 0.4s ease;
+                backdrop-filter: blur(15px);
+            }
+
+            .navbar.active { left: 0; }
+            .menu-btn { display: block; }
+            .policy-wrapper { padding: 30px 20px; }
+            .footer-grid { grid-template-columns: 1fr; gap: 40px; }
+        }
+
+        @media (max-width: 768px) {
+            .page-banner h1 { font-size: 2.3rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container nav-container">
+            <a href="index.html" class="logo">
+                <i class="fa-solid fa-compass-drafting"></i> Harry Architect
+            </a>
+            <ul class="navbar" id="mobileNavbar">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="about.html" class="nav-link">About</a></li>
+                <li><a href="projects.html" class="nav-link">Projects</a></li>
+                <li><a href="design-elevation.html" class="nav-link">Design&Elevation</a></li>
+                <li><a href="services.html" class="nav-link">Services</a></li>
+                <li><a href="packages.html" class="nav-link">Packages</a></li>
+                <li><a href="blogs.html" class="nav-link">Blogs</a></li>
+                <li><a href="Contact.html" class="nav-link">Contact</a></li>
+            </ul>
+            <div class="menu-btn" id="menuToggle"><i class="fa-solid fa-bars"></i></div>
+        </div>
+    </header>
+
+    <div class="page-banner">
+        <div class="container">
+            <h1>Privacy Policy</h1>
+            <p>Your privacy is important to us. Learn how we protect your personal and project information.</p>
+        </div>
+    </div>
+
+    <section>
+        <div class="container">
+            <div class="policy-wrapper">
+                
+                <div class="policy-section">
+                    <h2><i class="fa-solid fa-circle-info"></i> Introduction</h2>
+                    <p>Welcome to Harry Architect. We are highly committed to respecting and protecting the privacy of our visitors and clients. This Privacy Policy page explains how we collect, use, and safe-keep your personal and project details when you interact with our estimation forms, contact cards, or consultation setups.</p>
+                </div>
+
+                <div class="policy-section">
+                    <h2><i class="fa-solid fa-database"></i> Information We Collect</h2>
+                    <p>When you submit a design inquiry or estimation request on our home screen or contact portals, we collect essential project details to serve you better. This includes:</p>
+                    <ul>
+                        <li>Your personal identification (Full Name, Active WhatsApp or Mobile Phone Number).</li>
+                        <li>Detailed technical features (Plot length/width size, society location, preferred city name).</li>
+                        <li>Specific custom data (Interior requirements, selected building genres, architectural layout choices).</li>
+                    </ul>
+                </div>
+
+                <div class="policy-section">
+                    <h2><i class="fa-solid fa-arrows-to-eye"></i> How We Use Your Data</h2>
+                    <p>Harry Architect strictly utilizes your shared data for targeted business optimization. We never trade, distribute, or leak your private information. Your records are used to:</p>
+                    <ul>
+                        <li>Draft highly tailored computerized maps, 3D front elevations, or cost analysis breakdowns.</li>
+                        <li>Communicate project updates and provide custom quote updates via WhatsApp or mobile network.</li>
+                        <li>Analyze internal metrics to enhance our digital user interfaces and client communication workflows.</li>
+                    </ul>
+                </div>
+
+                <div class="policy-section">
+                    <h2><i class="fa-solid fa-shield-halved"></i> Data Security & Integrity</h2>
+                    <p>Our separate design, planning, and structural departments implement proper security layers to ensure your blueprints, contact numbers, and payment receipts are highly confidential. Authorized senior representatives alone handle critical client profiles during site evaluation phases.</p>
+                </div>
+
+                <div class="policy-section">
+                    <h2><i class="fa-solid fa-envelope-open-text"></i> Policy Updates & Contact</h2>
+                    <p>We reserve the right to alter or upgrade this policy layout to stay fully synced with Pakistan's digital privacy laws. If you have any serious concerns, complaints, or feedback regarding your data safety, please write to our executive staff directly via <strong>Harry846376@gmail.com</strong>.</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container footer-grid">
+            <div class="footer-col">
+                <h3>About Us</h3>
+                <p>Harry architect was established in Pattoki Punjab, Pakistan in 2022. The company grew organically and gained extensive experience in Pakistan. Currently giving services all over Pakistan, Harry architect has accumulated an impressive portfolio of projects that spans the breadth of building genres – from residential, commercial, leisure, retail, and interior design. The years of experience and absolute commitment to quality enhance the reputation as a premier contractor.</p>
+                <div class="social-links">
+                    <a href="https://www.facebook.com/share/1Cnjxv192U/?mibextid=wwXIfr" target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="https://www.instagram.com/harryarchitecture?igsh=MWkxNmxqdWM4bzM0Mw%3D%3D&utm_source=qr" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://www.tiktok.com/@harryarchitect?_r=1&_t=ZS-97PktKCWtDG" target="_blank"><i class="fa-brands fa-tiktok"></i></a>
+                    <a href="https://youtube.com/@harry_architect?si=gAx_jFO3uc8M3Oyh" target="_blank"><i class="fa-brands fa-youtube"></i></a>
+                </div>
+            </div>
+
+            <div class="footer-col">
+                <h3>Company</h3>
+                <div class="footer-links">
+                    <a href="index.html">Home</a>
+                    <a href="about.html">About</a>
+                    <a href="projects.html">Projects</a>
+                    <a href="design-elevation.html">Design & Elevation</a>
+                    <a href="services.html">Services</a>
+                    <a href="packages.html">Packages</a>
+                    <a href="blogs.html">Blogs</a>
+                    <a href="Contact.html">Contact</a>
+                    <a href="privacy-policy.html">Privacy Policy</a>
+                </div>
+            </div>
+
+            <div class="footer-col">
+                <h3>Content Us</h3>
+                <ul class="content-info-list">
+                    <li><i class="fa-solid fa-location-dot"></i> Pattoki, District Kasur</li>
+                    <li><i class="fa-solid fa-phone"></i> +923245301575</li>
+                    <li><i class="fa-solid fa-envelope"></i> Harry846376@gmail.com</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="container copyright-bar">
+            <p>© 2026 Harry Architect | Pakistan's No.1 Architectural & Construction Website. All rights reserved. | Update : v2.0</p>
+        </div>
+    </footer>
+
+    <div class="floating-container">
+        <a href="https://wa.me/923245301575?text=Hi%20Harry%20Architect..." target="_blank" class="floating-btn float-whatsapp">
+            <i class="fa-brands fa-whatsapp"></i>
+        </a>
+        <a href="index.html" class="floating-btn float-home">
+            <i class="fa-solid fa-house"></i>
+        </a>
+    </div>
+
+    <script>
+        const menuToggle = document.getElementById('menuToggle');
+        const mobileNavbar = document.getElementById('mobileNavbar');
+
+        menuToggle.addEventListener('click', () => {
+            mobileNavbar.classList.toggle('active');
+            const icon = menuToggle.querySelector('i');
+            if (mobileNavbar.classList.contains('active')) {
+                icon.classList.remove('fa-bars');
+                icon.classList.add('fa-xmark');
+            } else {
+                icon.classList.remove('fa-xmark');
+                icon.classList.add('fa-bars');
+            }
+        });
+    </script>
+</body>
+</html>

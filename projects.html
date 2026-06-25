@@ -1,0 +1,916 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- --- ADVANCED SEO META TAGS --- -->
+    <link rel="icon" type="image/webp" href="logo.webp">
+    <title>Our Projects | Harry Architect - Premier Architectural Services in Pakistan</title>
+    <meta name="description" content="Explore the premium portfolio of Harry Architect. From 5 Marla modern houses to luxurious 2 Kanal villas and modern office designs across Pakistan.">
+    <meta name="keywords" content="Harry Architect, Architectural projects, 5 Marla house design, 10 marla modern house, interior design Pakistan, house elevation Pattoki, Lahore architects">
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="Harry Architect">
+    <link rel="canonical" href="https://harryarchitect.com/projects.html">
+
+    <!-- Open Graph / Facebook SEO -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://harryarchitect.com/projects.html">
+    <meta property="og:title" content="Our Projects | Harry Architect">
+    <meta property="og:description" content="Explore the premium portfolio of Harry Architect. From modern residential homes to high-end interior and commercial designs.">
+    <meta property="og:image" content="img009.webp">
+
+    <!-- Twitter SEO -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://harryarchitect.com/projects.html">
+    <meta property="twitter:title" content="Our Projects | Harry Architect">
+    <meta property="twitter:description" content="Explore the premium portfolio of Harry Architect. From modern residential homes to high-end interior and commercial designs.">
+    <meta property="twitter:image" content="img009.webp">
+
+    <!-- --- CSS STYLESHEETS --- -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- AOS Animation Library CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+    <style>
+        /* --- CSS VARIABLES & RESET --- */
+        :root {
+            --primary-bg: #121212;
+            --card-bg: #1e1e1e;
+            --text-color: #F5F5F5;
+            --text-muted: #b3b3b3;
+            --accent-gold: #D4AF37;
+            --accent-bronze: #CD7F32;
+            --font-main: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            text-decoration: none;
+            list-style: none;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background-color: var(--primary-bg);
+            color: var(--text-color);
+            font-family: var(--font-main);
+            overflow-x: hidden;
+            line-height: 1.6;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        section {
+            padding: 80px 0;
+        }
+
+        /* --- HEADER & NAVBAR --- */
+        header {
+            background-color: rgba(18, 18, 18, 0.95);
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            border-bottom: 1px solid rgba(212, 175, 55, 0.1);
+            backdrop-filter: blur(10px);
+        }
+
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 80px;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--accent-gold);
+        }
+
+        .navbar {
+            display: flex;
+            gap: 15px;
+        }
+
+        .nav-link {
+            color: var(--text-color);
+            font-size: 0.95rem;
+            font-weight: 500;
+            padding: 8px 12px;
+            border-radius: 4px;
+            transition: all 0.3s ease;
+        }
+
+        .nav-link:hover, .nav-link.active {
+            color: var(--accent-gold);
+            background-color: rgba(212, 175, 55, 0.1);
+        }
+
+        .menu-btn {
+            display: none;
+            color: var(--text-color);
+            font-size: 1.5rem;
+            cursor: pointer;
+            z-index: 1001;
+            transition: transform 0.3s ease;
+        }
+
+        /* --- HERO SECTION --- */
+        .projects-hero {
+            position: relative;
+            height: 45vh;
+            min-height: 350px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            background: url('img009.webp') no-repeat center center/cover;
+            padding-top: 80px;
+        }
+
+        .hero-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to bottom, rgba(18, 18, 18, 0.7), rgba(18, 18, 18, 0.9));
+            z-index: 1;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero-content h1 {
+            font-size: 3.5rem;
+            color: var(--accent-gold);
+            margin-bottom: 10px;
+            font-weight: 700;
+            letter-spacing: 1px;
+        }
+
+        .hero-content p {
+            font-size: 1.2rem;
+            color: var(--text-muted);
+        }
+
+        .hero-content p a {
+            color: var(--accent-gold);
+            transition: color 0.3s;
+        }
+        
+        .hero-content p a:hover {
+            color: #ffffff;
+        }
+
+        /* --- MAIN LAYOUT STRUCTURE --- */
+        .projects-main-grid {
+            display: grid;
+            grid-template-columns: 2.8fr 1.2fr;
+            gap: 40px;
+            align-items: start;
+        }
+
+        /* --- PROJECTS CARDS GRID --- */
+        .projects-cards-holder {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 25px;
+        }
+
+        .p-card {
+            background-color: var(--card-bg);
+            border-radius: 8px;
+            overflow: hidden;
+            border: 1px solid rgba(255,255,255,0.03);
+            transition: transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1), border-color 0.3s, box-shadow 0.3s;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .p-card:hover {
+            transform: translateY(-8px);
+            border-color: rgba(212, 175, 55, 0.3);
+            box-shadow: 0 12px 20px rgba(0,0,0,0.4);
+        }
+
+        .p-img-box {
+            position: relative;
+            width: 100%;
+            aspect-ratio: 1 / 1;
+            overflow: hidden;
+            background-color: #090909; 
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .p-img-box img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain; 
+            transition: transform 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+        }
+
+        .p-card:hover .p-img-box img {
+            transform: scale(1.05);
+        }
+
+        .p-details {
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+        }
+
+        .p-title {
+            font-size: 1.25rem;
+            color: var(--text-color);
+            margin-bottom: 8px;
+            font-weight: 600;
+        }
+
+        .p-client {
+            font-size: 0.95rem;
+            color: var(--accent-gold);
+            margin-bottom: 12px;
+            font-weight: 500;
+        }
+
+        .p-bottom-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: auto;
+            gap: 10px;
+            padding-top: 10px;
+            border-top: 1px solid rgba(255,255,255,0.05);
+        }
+
+        .p-address {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            max-width: 60%;
+        }
+
+        .p-address i {
+            color: var(--accent-gold);
+            margin-right: 4px;
+        }
+
+        .p-info-btn {
+            background-color: transparent;
+            border: 1px solid var(--accent-gold);
+            color: var(--accent-gold);
+            padding: 6px 12px;
+            font-size: 0.85rem;
+            border-radius: 4px;
+            font-weight: 600;
+            transition: all 0.3s;
+            white-space: nowrap;
+        }
+
+        .p-info-btn:hover {
+            background-color: var(--accent-gold);
+            color: var(--primary-bg);
+        }
+
+        /* --- SIDEBAR CONTAINERS --- */
+        .sidebar-container {
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
+            position: sticky;
+            top: 110px;
+        }
+
+        .sidebar-box {
+            background-color: var(--card-bg);
+            padding: 35px 25px;
+            border-radius: 10px;
+            border: 1px solid rgba(212, 175, 55, 0.2);
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            transition: transform 0.3s ease;
+        }
+        
+        .sidebar-box:hover {
+            transform: translateY(-3px);
+        }
+
+        .sidebar-box i.box-icon {
+            font-size: 3rem;
+            color: var(--accent-gold);
+            margin-bottom: 20px;
+        }
+
+        .sidebar-box h3 {
+            font-size: 1.6rem;
+            color: var(--text-color);
+            margin-bottom: 15px;
+        }
+
+        .sidebar-box p {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            margin-bottom: 30px;
+        }
+
+        .phone-call-btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            background-color: var(--accent-gold);
+            color: var(--primary-bg);
+            padding: 15px;
+            font-size: 1.1rem;
+            font-weight: bold;
+            border-radius: 6px;
+            transition: all 0.3s ease;
+        }
+
+        .phone-call-btn:hover {
+            background-color: transparent;
+            color: var(--accent-gold);
+            border: 1px solid var(--accent-gold);
+        }
+
+        .offer-box {
+            border: 1px dashed var(--accent-gold);
+            background: linear-gradient(145deg, #1e1e1e, #151515);
+        }
+
+        .offer-box i.box-icon {
+            color: #ffcc00;
+            animation: pulse 2s infinite;
+        }
+
+        .offer-tag {
+            background-color: rgba(212, 175, 55, 0.15);
+            color: var(--accent-gold);
+            padding: 5px 15px;
+            border-radius: 20px;
+            display: inline-block;
+            font-size: 0.85rem;
+            font-weight: bold;
+            text-transform: uppercase;
+            margin-bottom: 15px;
+            letter-spacing: 1px;
+        }
+
+        .whatsapp-book-btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            background-color: #25D366;
+            color: #ffffff;
+            padding: 15px;
+            font-size: 1.1rem;
+            font-weight: bold;
+            border-radius: 6px;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3);
+        }
+
+        .whatsapp-book-btn:hover {
+            background-color: #20ba5a;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(37, 211, 102, 0.4);
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.08); }
+            100% { transform: scale(1); }
+        }
+
+        /* --- DUAL FLOATING ACTIONS BUTTONS --- */
+        .floating-actions-wrapper {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            z-index: 9999;
+        }
+
+        .floating-btn {
+            width: 55px;
+            height: 55px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            color: #ffffff;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.4);
+            transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            cursor: pointer;
+        }
+
+        .floating-btn:hover {
+            transform: translateY(-5px) scale(1.05);
+        }
+
+        .floating-whatsapp {
+            background-color: #25D366;
+        }
+
+        .floating-home {
+            background-color: var(--accent-gold);
+            color: var(--primary-bg);
+        }
+
+        /* --- FOOTER --- */
+        footer {
+            background-color: #0c0c0c;
+            padding: 70px 0 20px 0;
+            border-top: 1px solid rgba(212, 175, 55, 0.1);
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr;
+            gap: 50px;
+            margin-bottom: 5px;
+        }
+
+        .footer-col h3 {
+            color: var(--accent-gold);
+            font-size: 1.3rem;
+            margin-bottom: 25px;
+        }
+
+        .footer-col p {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            margin-bottom: 20px;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 15px;
+        }
+
+        .social-links a {
+            width: 40px;
+            height: 40px;
+            background-color: var(--card-bg);
+            color: var(--text-color);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            font-size: 1.1rem;
+            transition: all 0.3s;
+        }
+
+        .social-links a:hover {
+            background-color: var(--accent-gold);
+            color: var(--primary-bg);
+            transform: translateY(-3px);
+        }
+
+        .footer-links {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 12px;
+        }
+
+        .footer-links a {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            transition: color 0.3s;
+        }
+
+        .footer-links a:hover {
+            color: var(--accent-gold);
+        }
+
+        .content-info-list {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .content-info-list li {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            color: var(--text-muted);
+            font-size: 0.95rem;
+        }
+
+        .content-info-list i {
+            color: var(--accent-gold);
+            font-size: 1.1rem;
+            width: 20px;
+        }
+
+        .copyright-bar {
+            text-align: center;
+            padding-top: 30px;
+            margin-top: 40px;
+            border-top: 1px solid rgba(255,255,255,0.05);
+            font-size: 0.9rem;
+            color: var(--text-muted);
+        }
+
+        /* --- RESPONSIVE MEDIA QUERIES --- */
+        @media (max-width: 992px) {
+            .navbar {
+                display: flex;
+                flex-direction: column;
+                position: absolute;
+                top: 80px;
+                left: -100%;
+                width: 100%;
+                background-color: rgba(18, 18, 18, 0.98);
+                padding: 20px 5%;
+                gap: 10px;
+                border-bottom: 1px solid rgba(212, 175, 55, 0.2);
+                transition: left 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+                backdrop-filter: blur(15px);
+            }
+
+            .navbar.active {
+                left: 0;
+            }
+            
+            .menu-btn {
+                display: block;
+            }
+
+            .projects-main-grid {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+
+            .sidebar-container {
+                position: static;
+                max-width: 500px;
+                margin: 0 auto;
+                width: 100%;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .hero-content h1 {
+                font-size: 2.5rem;
+            }
+            .projects-cards-holder {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+
+    <!-- --- JSON-LD STRUCTURED DATA SCHEMA FOR GOOGLE SEO --- -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ArchitecturalService",
+      "name": "Harry Architect",
+      "description": "Premium Architecture & Construction services in Pakistan.",
+      "url": "https://harryarchitect.com",
+      "telephone": "+923245301575",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Pattoki",
+        "addressRegion": "Punjab",
+        "addressCountry": "PK"
+      }
+    }
+    </script>
+</head>
+<body>
+
+    <!-- NAVBAR SECTION -->
+    <header>
+        <div class="container nav-container">
+            <a href="index.html" class="logo">
+                <i class="fa-solid fa-compass-drafting"></i> Harry Architect
+            </a>
+            <ul class="navbar" id="mobileNavbar">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="about.html" class="nav-link">About</a></li>
+                <li><a href="projects.html" class="nav-link active">Projects</a></li>
+                <li><a href="design-elevation.html" class="nav-link">Design&Elevation</a></li>
+                <li><a href="services.html" class="nav-link">Services</a></li>
+                <li><a href="packages.html" class="nav-link">Packages</a></li>
+                <li><a href="blogs.html" class="nav-link">Blogs</a></li>
+                <li><a href="Contact.html" class="nav-link">Contact</a></li>
+            </ul>
+            <div class="menu-btn" id="menuToggle"><i class="fa-solid fa-bars"></i></div>
+        </div>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section class="projects-hero">
+        <div class="hero-overlay"></div>
+        <div class="hero-content" data-aos="fade-up" data-aos-duration="1000">
+            <h1>Our Projects</h1>
+            <p><a href="index.html">Home</a> | Projects</p>
+        </div>
+    </section>
+
+    <!-- MAIN PROJECTS DISPLAY GRID -->
+    <section>
+        <div class="container projects-main-grid">
+            
+            <!-- Left Side Content: 10 Cards Grid -->
+            <div class="projects-cards-holder">
+                
+                <!-- Card 1 -->
+                <div class="p-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="p-img-box">
+                        <img src="img010.webp" alt="5 Marla Modern House Project by Harry Architect">
+                    </div>
+                    <div class="p-details">
+                        <h3 class="p-title">001  |  5 Marla Modern House </h3>
+                        <p class="p-client"><i class="fa-regular fa-user"></i> Client: Abdullah</p>
+                        <div class="p-bottom-row">
+                            <span class="p-address"><i class="fa-solid fa-location-dot"></i>  Bhawalnagar</span>
+                            <a href="p1.html" class="p-info-btn">More Info</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="p-card" data-aos="fade-up" data-aos-delay="150">
+                    <div class="p-img-box">
+                        <img src="img011.webp" alt="10 Marla House Design by Harry Architect">
+                    </div>
+                    <div class="p-details">
+                        <h3 class="p-title">002  |  10 Marla House</h3>
+                        <p class="p-client"><i class="fa-regular fa-user"></i> Client: Mr Aqeel </p>
+                        <div class="p-bottom-row">
+                            <span class="p-address"><i class="fa-solid fa-location-dot"></i>Lahore</span>
+                            <a href="p2.html" class="p-info-btn">More Info</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="p-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="p-img-box">
+                        <img src="img012.webp" alt="Premium Bedroom Interior Design">
+                    </div>
+                    <div class="p-details">
+                        <h3 class="p-title">003  |  Bedroom Design</h3>
+                        <p class="p-client"><i class="fa-regular fa-user"></i> Client: Abid Sab</p>
+                        <div class="p-bottom-row">
+                            <span class="p-address"><i class="fa-solid fa-location-dot"></i>Layyah</span>
+                            <a href="p3.html" class="p-info-btn">More Info</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="p-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="p-img-box">
+                        <img src="img013.webp" alt="Luxury 2 Kanal House Plan">
+                    </div>
+                    <div class="p-details">
+                        <h3 class="p-title">004  |  2 kanal House</h3>
+                        <p class="p-client"><i class="fa-regular fa-user"></i> Client:SHAHZAIB AHMAD</p>
+                        <div class="p-bottom-row">
+                            <span class="p-address"><i class="fa-solid fa-location-dot"></i> Pakistan</span>
+                            <a href="p4.html" class="p-info-btn">More Info</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 5 -->
+                <div class="p-card" data-aos="fade-up" data-aos-delay="150">
+                    <div class="p-img-box">
+                        <img src="IMG014.webp" alt="Modern Corporate Office Design Multan">
+                    </div>
+                    <div class="p-details">
+                        <h3 class="p-title">005  |  OFFICE Design </h3>
+                        <p class="p-client"><i class="fa-regular fa-user"></i> Client: Haseeb </p>
+                        <div class="p-bottom-row">
+                            <span class="p-address"><i class="fa-solid fa-location-dot"></i> Multan Cantt</span>
+                            <a href="p5.html" class="p-info-btn">More Info</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 6 -->
+                <div class="p-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="p-img-box">
+                        <img src="p6c.webp" alt="Luxury Bedroom Interior Styling">
+                    </div>
+                    <div class="p-details">
+                        <h3 class="p-title">006  |  Bedroom interior</h3>
+                        <p class="p-client"><i class="fa-regular fa-user"></i> Client: Hamza Zafar</p>
+                        <div class="p-bottom-row">
+                            <span class="p-address"><i class="fa-solid fa-location-dot"></i> City, Pattoki</span>
+                            <a href="p6.html" class="p-info-btn">More Info</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 7 -->
+                <div class="p-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="p-img-box">
+                        <img src="p7a.webp" alt="Modern Elevation House Front Design">
+                    </div>
+                    <div class="p-details">
+                        <h3 class="p-title">007  |  Modern House Design</h3>
+                        <p class="p-client"><i class="fa-regular fa-user"></i> Client: MR.AJAZ</p>
+                        <div class="p-bottom-row">
+                            <span class="p-address"><i class="fa-solid fa-location-dot"></i>  FAISALABAD</span>
+                            <a href="p7.html" class="p-info-btn">More Info</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 8 -->
+                <div class="p-card" data-aos="fade-up" data-aos-delay="150">
+                    <div class="p-img-box">
+                        <img src="p8a.webp" alt="5 Marla Spanish Style House Kasur">
+                    </div>
+                    <div class="p-details">
+                        <h3 class="p-title">008  |  5 Marla Spanish House</h3>
+                        <p class="p-client"><i class="fa-regular fa-user"></i> Client: Spanish House</p>
+                        <div class="p-bottom-row">
+                            <span class="p-address"><i class="fa-solid fa-location-dot"></i> Kasur City</span>
+                            <a href="p8.html" class="p-info-btn">More Info</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 9 -->
+                <div class="p-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="p-img-box">
+                        <img src="p9a.webp" alt="Modern Luxury Elevation Narowal">
+                    </div>
+                    <div class="p-details">
+                        <h3 class="p-title">009  |  Modern House Design</h3>
+                        <p class="p-client"><i class="fa-regular fa-user"></i> Client: MALIK ZEESHAN JAVED</p>
+                        <div class="p-bottom-row">
+                            <span class="p-address"><i class="fa-solid fa-location-dot"></i> AT NAROWAL</span>
+                            <a href="p9.html" class="p-info-btn">More Info</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 10 -->
+                <div class="p-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="p-img-box">
+                        <img src="p10a.webp" alt="Classical Premium House Elevation Design">
+                    </div>
+                    <div class="p-details">
+                        <h3 class="p-title">010  |  Classical House</h3>
+                        <p class="p-client"><i class="fa-regular fa-user"></i> Client: Hammad Ali</p>
+                        <div class="p-bottom-row">
+                            <span class="p-address"><i class="fa-solid fa-location-dot"></i> Multan</span>
+                            <a href="p10.html" class="p-info-btn">More Info</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Side (Sidebar Box Containers) -->
+            <div class="sidebar-container">
+                
+                <!-- Box 1: Need Help -->
+                <div class="sidebar-box" data-aos="zoom-in" data-aos-delay="100">
+                    <div class="box-icon"><i class="fa-solid fa-circle-question"></i></div>
+                    <h3>Need Help</h3>
+                    <p>Please call us for any kind of help, support or inquiry. Our representative will response quickly.</p>
+                    <a href="tel:+923245301575" class="phone-call-btn">
+                        <i class="fa-solid fa-phone"></i> +923245301575
+                    </a>
+                </div>
+
+                <!-- Box 2: Discount Offer Box -->
+                <div class="sidebar-box offer-box" data-aos="zoom-in" data-aos-delay="200">
+                    <div class="offer-tag">Limited Time Offer</div>
+                    <div class="box-icon"><i class="fa-solid fa-tags"></i></div>
+                    <h3>Get 15% Discount</h3>
+                    <p>Get a special 15% discount on all custom architectural design orders placed online today!</p>
+                    <a href="https://wa.me/923245301575?text=Hi%20Harry%20Architect,%20I%20want%20to%20book%20an%20architectural%20design%20and%20avail%20the%2015%%20online%20discount%20offer." target="_blank" class="whatsapp-book-btn">
+                        <i class="fa-brands fa-whatsapp"></i> Book Now
+                    </a>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- FOOTER SECTION -->
+    <footer>
+        <div class="container footer-grid">
+            <div class="footer-col" data-aos="fade-up">
+                <h3>About Us</h3>
+                <p>Harry architect was established in Pattoki Punjab, Pakistan in 2022. The company grew organically and gained extensive experience in Pakistan. Currently giving services all over Pakistan, Harry architect has accumulated an impressive portfolio of projects that spans the breadth of building genres – from residential, commercial, leisure, retail, and interior design. The years of experience and absolute commitment to quality enhance the reputation as a premier contractor.</p>
+                <div class="social-links">
+                    <a href="https://www.facebook.com/share/1Cnjxv192U/?mibextid=wwXIfr" target="_blank" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="https://www.instagram.com/harryarchitecture?igsh=MWkxNmxqdWM4bzM0Mw%3D%3D&utm_source=qr" target="_blank" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://www.tiktok.com/@harryarchitect?_r=1&_t=ZS-97PktKCWtDG" target="_blank" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+                    <a href="https://youtube.com/@harry_architect?si=gAx_jFO3uc8M3Oyh" target="_blank" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+                </div>
+            </div>
+
+            <div class="footer-col" data-aos="fade-up" data-aos-delay="100">
+                <h3>Company</h3>
+                <div class="footer-links">
+                    <a href="index.html">Home</a>
+                    <a href="about.html">About</a>
+                    <a href="projects.html">Projects</a>
+                    <a href="design-elevation.html">Design & Elevation</a>
+                    <a href="services.html">Services</a>
+                    <a href="packages.html">Packages</a>
+                    <a href="blogs.html">Blogs</a>
+                    <a href="Contact.html">Contact</a>
+                    <a href="privacy-policy.html">Privacy Policy</a>
+                </div>
+            </div>
+
+            <div class="footer-col" data-aos="fade-up" data-aos-delay="200">
+                <h3>Contact Us</h3>
+                <ul class="content-info-list">
+                    <li><i class="fa-solid fa-location-dot"></i> Pattoki, District Kasur</li>
+                    <li><i class="fa-solid fa-phone"></i> +923245301575</li>
+                    <li><i class="fa-solid fa-envelope"></i> Harry846376@gmail.com</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="container copyright-bar">
+            <p>© 2026 Harry Architect | Pakistan's No.1 Architectural & Construction Website. All rights reserved. Update : v2.0</p>
+        </div>
+    </footer>
+
+    <!-- DUAL FLOATING ACTIONS BUTTONS -->
+    <div class="floating-actions-wrapper">
+        <a href="https://wa.me/923245301575?text=Hi%20Harry%20Architect,%20I%20visited%20your%20Projects%20page%20and%20want%20to%20discuss%20a%20project." target="_blank" class="floating-btn floating-whatsapp" title="Chat on WhatsApp">
+            <i class="fa-brands fa-whatsapp"></i>
+        </a>
+        <a href="index.html" class="floating-btn floating-home" title="Go to Home">
+            <i class="fa-solid fa-house"></i>
+        </a>
+    </div>
+
+    <!-- --- JAVASCRIPT LIBRARIES & SCRIPTS --- -->
+    <!-- AOS JS Library for Scroll Animations -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        // Initialize Animations
+        AOS.init({
+            offset: 120, 
+            duration: 800,
+            easing: 'ease-in-out',
+            once: true 
+        });
+
+        // Mobile Menu JavaScript
+        const menuToggle = document.getElementById('menuToggle');
+        const mobileNavbar = document.getElementById('mobileNavbar');
+
+        menuToggle.addEventListener('click', () => {
+            mobileNavbar.classList.toggle('active');
+            const icon = menuToggle.querySelector('i');
+            if (mobileNavbar.classList.contains('active')) {
+                icon.classList.remove('fa-bars');
+                icon.classList.add('fa-xmark');
+                icon.style.transform = "rotate(90deg)";
+            } else {
+                icon.classList.remove('fa-xmark');
+                icon.classList.add('fa-bars');
+                icon.style.transform = "rotate(0deg)";
+            }
+        });
+    </script>
+</body>
+</html>

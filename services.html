@@ -1,0 +1,775 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO Meta Tags -->
+    <title>Our Services | Harry Architect - Pakistan's No.1 Architectural & Construction Website</title>
+    <meta name="description" content="Discover premium architectural design, 4K front elevations, luxury interior design, structural engineering, and construction services across Pakistan by Harry Architect.">
+    <meta name="keywords" content="Harry Architect, Architectural Planning, 3D Front Elevation, Luxury Interior Design, Construction Pakistan, Pattoki Architects">
+    <meta name="author" content="Harry Architect">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph / Facebook SEO -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Our Services | Harry Architect - Pakistan's No.1 Architectural & Construction Website">
+    <meta property="og:description" content="Discover premium architectural design, 4K front elevations, luxury interior design, structural engineering, and construction services across Pakistan by Harry Architect.">
+    <meta property="og:image" content="s2.webp">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/webp" href="logo.webp">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* --- CSS VARIABLES & RESET --- */
+        :root {
+            --primary-bg: #121212;
+            --card-bg: #1e1e1e;
+            --text-color: #F5F5F5;
+            --text-muted: #b3b3b3;
+            --accent-gold: #D4AF37;
+            --accent-bronze: #CD7F32;
+            --font-main: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            text-decoration: none;
+            list-style: none;
+        }
+
+        body {
+            background-color: var(--primary-bg);
+            color: var(--text-color);
+            font-family: var(--font-main);
+            overflow-x: hidden;
+            line-height: 1.6;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        section {
+            padding: 80px 0;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            color: var(--accent-gold);
+            margin-bottom: 10px;
+        }
+
+        .section-subtitle {
+            text-align: center;
+            color: var(--text-muted);
+            margin-bottom: 50px;
+            font-size: 1.1rem;
+        }
+
+        /* --- SEO ANIMATION ENGINE --- */
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s ease-out;
+        }
+        
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* --- HEADER & NAVBAR --- */
+        header {
+            background-color: rgba(18, 18, 18, 0.95);
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            border-bottom: 1px solid rgba(212, 175, 55, 0.1);
+            backdrop-filter: blur(10px);
+        }
+
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 80px;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--accent-gold);
+        }
+
+        .navbar {
+            display: flex;
+            gap: 15px;
+        }
+
+        .nav-link {
+            color: var(--text-color);
+            font-size: 0.95rem;
+            font-weight: 500;
+            padding: 8px 12px;
+            border-radius: 4px;
+            transition: all 0.3s ease;
+        }
+
+        .nav-link:hover, .nav-link.active {
+            color: var(--accent-gold);
+            background-color: rgba(212, 175, 55, 0.1);
+        }
+
+        .menu-btn {
+            display: none;
+            color: var(--text-color);
+            font-size: 1.5rem;
+            cursor: pointer;
+            z-index: 1001;
+        }
+
+        /* --- HERO SECTION --- */
+        .services-hero {
+            position: relative;
+            height: 45vh;
+            min-height: 350px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            background: url('img002.webp') no-repeat center center/cover;
+            padding-top: 80px;
+        }
+
+        .hero-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to bottom, rgba(18, 18, 18, 0.7), rgba(18, 18, 18, 0.9));
+            z-index: 1;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero-content h1 {
+            font-size: 3.5rem;
+            color: var(--accent-gold);
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+
+        .hero-content p {
+            font-size: 1.2rem;
+            color: var(--text-muted);
+        }
+
+        .hero-content p a {
+            color: var(--accent-gold);
+        }
+
+        /* --- SERVICES DETAIL GRID --- */
+        .services-detail-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+        }
+
+        .service-detail-card {
+            background-color: var(--card-bg);
+            border-radius: 10px;
+            border: 1px solid rgba(255, 255, 255, 0.03);
+            overflow: hidden;
+            transition: transform 0.3s, border-color 0.3s, box-shadow 0.3s;
+        }
+
+        .service-detail-card:hover {
+            transform: translateY(-5px);
+            border-color: rgba(212, 175, 55, 0.3);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+        }
+
+        .service-img-box {
+            position: relative;
+            height: 220px;
+            overflow: hidden;
+        }
+
+        .service-img-box img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .service-detail-card:hover .service-img-box img {
+            transform: scale(1.08);
+        }
+
+        .service-icon-badge {
+            position: absolute;
+            bottom: -25px;
+            right: 25px;
+            width: 55px;
+            height: 55px;
+            background-color: var(--accent-gold);
+            color: var(--primary-bg);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+            z-index: 2;
+        }
+
+        .service-body {
+            padding: 40px 25px 30px 25px;
+        }
+
+        .service-body h3 {
+            font-size: 1.4rem;
+            color: var(--text-color);
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+
+        .service-body p {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            margin-bottom: 20px;
+            text-align: justify;
+        }
+
+        .service-features-list {
+            margin-bottom: 25px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .service-features-list li {
+            font-size: 0.9rem;
+            color: var(--text-color);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .service-features-list i {
+            color: var(--accent-gold);
+            font-size: 0.85rem;
+        }
+
+        .service-action-btn {
+            display: block;
+            text-align: center;
+            background-color: transparent;
+            border: 1px solid var(--accent-gold);
+            color: var(--accent-gold);
+            padding: 10px 20px;
+            font-size: 0.95rem;
+            border-radius: 5px;
+            font-weight: 600;
+            transition: all 0.3s;
+        }
+
+        .service-action-btn:hover {
+            background-color: var(--accent-gold);
+            color: var(--primary-bg);
+        }
+
+        /* --- CTA SECTION --- */
+        .cta-section {
+            background: linear-gradient(rgba(18, 18, 18, 0.85), rgba(18, 18, 18, 0.85)), url('img001.webp') no-repeat center center/cover;
+            text-align: center;
+            border-top: 1px solid rgba(212, 175, 55, 0.1);
+            border-bottom: 1px solid rgba(212, 175, 55, 0.1);
+        }
+
+        .cta-box {
+            max-width: 750px; 
+            margin: 0 auto;
+        }
+
+        .cta-box h2 {
+            font-size: 2.3rem;
+            color: var(--accent-gold);
+            margin-bottom: 15px;
+        }
+
+        .cta-box p {
+            color: var(--text-muted);
+            font-size: 1.1rem;
+            margin-bottom: 30px;
+        }
+
+        .btn-whatsapp-cta {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background-color: #25D366;
+            color: white;
+            padding: 14px 35px;
+            font-size: 1.1rem;
+            font-weight: bold;
+            border-radius: 30px;
+            transition: background 0.3s, transform 0.3s;
+            box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3);
+        }
+
+        .btn-whatsapp-cta:hover {
+            background-color: #20ba5a;
+            transform: translateY(-2px);
+        }
+
+        /* --- DUAL FLOATING ACTIONS BUTTONS --- */
+        .floating-actions-wrapper {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            z-index: 9999;
+        }
+
+        .floating-btn {
+            width: 55px;
+            height: 55px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            color: #ffffff;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.4);
+            transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            cursor: pointer;
+        }
+
+        .floating-btn:hover {
+            transform: translateY(-5px) scale(1.05);
+        }
+
+        .floating-whatsapp {
+            background-color: #25D366;
+        }
+
+        .floating-home {
+            background-color: var(--accent-gold);
+            color: var(--primary-bg);
+        }
+
+        /* --- FOOTER --- */
+        footer {
+            background-color: #0c0c0c;
+            padding: 70px 0 20px 0;
+            border-top: 1px solid rgba(212, 175, 55, 0.1);
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr;
+            gap: 50px;
+            margin-bottom: 5px;
+        }
+
+        .footer-col h3 {
+            color: var(--accent-gold);
+            font-size: 1.3rem;
+            margin-bottom: 25px;
+        }
+
+        .footer-col p {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            margin-bottom: 20px;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 15px;
+        }
+
+        .social-links a {
+            width: 40px;
+            height: 40px;
+            background-color: var(--card-bg);
+            color: var(--text-color);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            font-size: 1.1rem;
+            transition: all 0.3s;
+        }
+
+        .social-links a:hover {
+            background-color: var(--accent-gold);
+            color: var(--primary-bg);
+            transform: translateY(-3px);
+        }
+
+        .footer-links {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 12px;
+        }
+
+        .footer-links a {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            transition: color 0.3s;
+        }
+
+        .footer-links a:hover {
+            color: var(--accent-gold);
+        }
+
+        .content-info-list {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .content-info-list li {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            color: var(--text-muted);
+            font-size: 0.95rem;
+        }
+
+        .content-info-list i {
+            color: var(--accent-gold);
+            font-size: 1.1rem;
+            width: 20px;
+        }
+
+        .copyright-bar {
+            text-align: center;
+            padding-top: 30px;
+            margin-top: 40px;
+            border-top: 1px solid rgba(255,255,255,0.05);
+            font-size: 0.9rem;
+            color: var(--text-muted);
+        }
+
+        /* --- RESPONSIVE MEDIA QUERIES --- */
+        @media (max-width: 992px) {
+            .navbar {
+                display: flex;
+                flex-direction: column;
+                position: absolute;
+                top: 80px;
+                left: -100%;
+                width: 100%;
+                background-color: rgba(18, 18, 18, 0.98);
+                padding: 20px 5%;
+                gap: 10px;
+                border-bottom: 1px solid rgba(212, 175, 55, 0.2);
+                transition: left 0.4s ease;
+                backdrop-filter: blur(15px);
+            }
+
+            .navbar.active {
+                left: 0;
+            }
+            
+            .menu-btn {
+                display: block;
+            }
+
+            .services-detail-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .hero-content h1 {
+                font-size: 2.5rem;
+            }
+            .services-detail-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- NAVBAR SECTION -->
+    <header>
+        <div class="container nav-container">
+            <a href="index.html" class="logo">
+                <i class="fa-solid fa-compass-drafting"></i> Harry Architect
+            </a>
+            <ul class="navbar" id="mobileNavbar">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="about.html" class="nav-link">About</a></li>
+                <li><a href="projects.html" class="nav-link">Projects</a></li>
+                <li><a href="design-elevation.html" class="nav-link">Design&Elevation</a></li>
+                <li><a href="services.html" class="nav-link active">Services</a></li>
+                <li><a href="packages.html" class="nav-link">Packages</a></li>
+                <li><a href="blogs.html" class="nav-link">Blogs</a></li>
+                <li><a href="Contact.html" class="nav-link">Contact</a></li>
+            </ul>
+            <div class="menu-btn" id="menuToggle"><i class="fa-solid fa-bars"></i></div>
+        </div>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section class="services-hero">
+        <div class="hero-overlay"></div>
+        <div class="hero-content reveal">
+            <h1>Our Premium Services</h1>
+            <p><a href="index.html">Home</a> | Services</p>
+        </div>
+    </section>
+
+    <!-- SERVICES CARDS SECTION -->
+    <section>
+        <div class="container">
+            <h2 class="section-title reveal">What We Do Best</h2>
+            <p class="section-subtitle reveal">Delivering high-end architecture and precise construction solutions all over Pakistan.</p>
+            
+            <div class="services-detail-grid">
+                
+                <!-- Service 1 -->
+                <div class="service-detail-card reveal">
+                    <div class="service-img-box">
+                        <img src="s1.webp" alt="Architectural Planning by Harry Architect">
+                        <div class="service-icon-badge"><i class="fa-solid fa-pen-ruler"></i></div>
+                    </div>
+                    <div class="service-body">
+                        <h3>Architectural Planning</h3>
+                        <p>We create smart, modern architectural floor plans tailored meticulously to your dynamic lifestyles, building codes, and plot directions.</p>
+                        <ul class="service-features-list">
+                            <li><i class="fa-solid fa-check"></i> 2D Submission Plans</li>
+                            <li><i class="fa-solid fa-check"></i> Functional Space Layouts</li>
+                            <li><i class="fa-solid fa-check"></i> Furniture Position Maps</li>
+                        </ul>
+                        <a href="https://wa.me/923245301575?text=Hi%20Harry%20Architect,%20I%20am%20interested%20in%20Architectural%20Planning%20services." target="_blank" class="service-action-btn">Discuss Project</a>
+                    </div>
+                </div>
+
+                <!-- Service 2 -->
+                <div class="service-detail-card reveal">
+                    <div class="service-img-box">
+                        <img src="s2.webp" alt="3D Front Elevation Renders Pakistan">
+                        <div class="service-icon-badge"><i class="fa-solid fa-cubes"></i></div>
+                    </div>
+                    <div class="service-body">
+                        <h3>3D Front Elevation</h3>
+                        <p>Visualize your landmark before laying a single brick. From contemporary to Spanish designs, we render breathtaking, hyper-realistic exterior views.</p>
+                        <ul class="service-features-list">
+                            <li><i class="fa-solid fa-check"></i> Ultra HD 4K Renders</li>
+                            <li><i class="fa-solid fa-check"></i> Architectural Walkthroughs</li>
+                            <li><i class="fa-solid fa-check"></i> Exact Material Selection</li>
+                        </ul>
+                        <a href="https://wa.me/923245301575?text=Hi%20Harry%20Architect,%20I%20am%20interested%20in%203D%20Front%20Elevation%20services." target="_blank" class="service-action-btn">Get Quote</a>
+                    </div>
+                </div>
+
+                <!-- Service 3 -->
+                <div class="service-detail-card reveal">
+                    <div class="service-img-box">
+                        <img src="s3.webp" alt="Luxury Interior Design Layouts">
+                        <div class="service-icon-badge"><i class="fa-solid fa-couch"></i></div>
+                    </div>
+                    <div class="service-body">
+                        <h3>Luxury Interior Design</h3>
+                        <p>Turn standard spaces into artistic premium layouts. We balance ergonomics and materials to bring exceptional comfort right to your doorstep.</p>
+                        <ul class="service-features-list">
+                            <li><i class="fa-solid fa-check"></i> Custom Ceiling & Media Walls</li>
+                            <li><i class="fa-solid fa-check"></i> Modular Kitchen Designs</li>
+                            <li><i class="fa-solid fa-check"></i> Lighting & Color Psychology</li>
+                        </ul>
+                        <a href="https://wa.me/923245301575?text=Hi%20Harry%20Architect,%20I%20am%20interested%20in%20Interior%20Design%20services." target="_blank" class="service-action-btn">Consult Now</a>
+                    </div>
+                </div>
+
+                <!-- Service 4 -->
+                <div class="service-detail-card reveal">
+                    <div class="service-img-box">
+                        <img src="s4.webp" alt="Structural Engineering and Safety Layouts">
+                        <div class="service-icon-badge"><i class="fa-solid fa-building-shield"></i></div>
+                    </div>
+                    <div class="service-body">
+                        <h3>Structural Engineering</h3>
+                        <p>Safety always comes first. Our seasoned structural engineers compose foolproof calculations to ensure total seismic safety for multiple stories.</p>
+                        <ul class="service-features-list">
+                            <li><i class="fa-solid fa-check"></i> Reinforced Concrete Details</li>
+                            <li><i class="fa-solid fa-check"></i> Foundation Load Analysis</li>
+                            <li><i class="fa-solid fa-check"></i> Steel Layout Schedules</li>
+                        </ul>
+                        <a href="https://wa.me/923245301575?text=Hi%20Harry%20Architect,%20I%20am%20interested%20in%20Structural%20Engineering%20services." target="_blank" class="service-action-btn">Verify Safety</a>
+                    </div>
+                </div>
+
+                <!-- Service 5 -->
+                <div class="service-detail-card reveal">
+                    <div class="service-img-box">
+                        <img src="s5.webp" alt="Premium Construction Services Pakistan">
+                        <div class="service-icon-badge"><i class="fa-solid fa-trowel-bricks"></i></div>
+                    </div>
+                    <div class="service-body">
+                        <h3>Premium Construction</h3>
+                        <p>Experience hassle-free physical project completion with absolute commitment to stellar grey-structure timelines and precise design blueprints.</p>
+                        <ul class="service-features-list">
+                            <li><i class="fa-solid fa-check"></i> Strict Material Testing</li>
+                            <li><i class="fa-solid fa-check"></i> On-Site Project Supervisors</li>
+                            <li><i class="fa-solid fa-check"></i> Regular Milestone Updates</li>
+                        </ul>
+                        <a href="https://wa.me/923245301575?text=Hi%20Harry%20Architect,%20I%20am%20interested%20in%20Construction%20services." target="_blank" class="service-action-btn">Build House</a>
+                    </div>
+                </div>
+
+                <!-- Service 6 -->
+                <div class="service-detail-card reveal">
+                    <div class="service-img-box">
+                        <img src="s6.webp" alt="Landscape Architecture Design">
+                        <div class="service-icon-badge"><i class="fa-solid fa-tree"></i></div>
+                    </div>
+                    <div class="service-body">
+                        <h3>Landscape Architecture</h3>
+                        <p>Connect seamlessly with pristine natural aesthetics. We organize magnificent green zones, cozy patios, and customized open-air seating elements.</p>
+                        <ul class="service-features-list">
+                            <li><i class="fa-solid fa-check"></i> 3D Garden Visualizations</li>
+                            <li><i class="fa-solid fa-check"></i> Patios & Lighting Paths</li>
+                            <li><i class="fa-solid fa-check"></i> Smart Water Features</li>
+                        </ul>
+                        <a href="https://wa.me/923245301575?text=Hi%20Harry%20Architect,%20I%20am%20interested%20in%20Landscape%20Architecture%20services." target="_blank" class="service-action-btn">Beautify Lawn</a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- CALL TO ACTION SECTION -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-box reveal">
+                <h2>Ready to Start Your Dream Project?</h2>
+                <p>Get a quick site visit response or professional consultation within 3 days directly at your actual location.</p>
+                <a href="https://wa.me/923245301575?text=Hi%20Harry%20Architect,%20I%20want%20to%20book%20a%20consultation%20for%20my%20plot." target="_blank" class="btn-whatsapp-cta">
+                    <i class="fa-brands fa-whatsapp"></i> Chat on WhatsApp Now
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER SECTION -->
+    <footer>
+        <div class="container footer-grid">
+            <div class="footer-col reveal">
+                <h3>About Us</h3>
+                <p>Harry architect was established in Pattoki Punjab, Pakistan in 2022. The company grew organically and gained extensive experience in Pakistan. Currently giving services all over Pakistan, Harry architect has accumulated an impressive portfolio of projects that spans the breadth of building genres – from residential, commercial, leisure, retail, and interior design. The years of experience and absolute commitment to quality enhance the reputation as a premier contractor.</p>
+                <div class="social-links">
+                    <a href="https://www.facebook.com/share/1Cnjxv192U/?mibextid=wwXIfr" target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="https://www.instagram.com/harryarchitecture?igsh=MWkxNmxqdWM4bzM0Mw%3D%3D&utm_source=qr" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://www.tiktok.com/@harryarchitect?_r=1&_t=ZS-97PktKCWtDG" target="_blank"><i class="fa-brands fa-tiktok"></i></a>
+                    <a href="https://youtube.com/@harry_architect?si=gAx_jFO3uc8M3Oyh" target="_blank"><i class="fa-brands fa-youtube"></i></a>
+                </div>
+            </div>
+
+            <div class="footer-col reveal">
+                <h3>Company</h3>
+                <div class="footer-links">
+                    <a href="index.html">Home</a>
+                    <a href="about.html">About</a>
+                    <a href="projects.html">Projects</a>
+                    <a href="design-elevation.html">Design & Elevation</a>
+                    <a href="services.html">Services</a>
+                    <a href="packages.html">Packages</a>
+                    <a href="blogs.html">Blogs</a>
+                    <a href="Contact.html">Contact</a>
+                    <a href="privacy-policy.html">Privacy Policy</a>
+                </div>
+            </div>
+
+            <div class="footer-col reveal">
+                <h3>Content Us</h3>
+                <ul class="content-info-list">
+                    <li><i class="fa-solid fa-location-dot"></i> Pattoki, District Kasur</li>
+                    <li><i class="fa-solid fa-phone"></i> +923245301575</li>
+                    <li><i class="fa-solid fa-envelope"></i> Harry846376@gmail.com</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="container copyright-bar">
+            <p>© 2026 Harry Architect | Pakistan's No.1 Architectural & Construction Website. All rights reserved. | Update : v2.0</p>
+        </div>
+    </footer>
+
+    <!-- DUAL FLOATING ACTIONS BUTTONS -->
+    <div class="floating-actions-wrapper">
+        <a href="https://wa.me/923245301575?text=Hi%20Harry%20Architect,%20I%20have%20an%20inquiry%20about%20your%20services." target="_blank" class="floating-btn floating-whatsapp" title="Chat on WhatsApp">
+            <i class="fa-brands fa-whatsapp"></i>
+        </a>
+        <a href="index.html" class="floating-btn floating-home" title="Go to Home">
+            <i class="fa-solid fa-house"></i>
+        </a>
+    </div>
+
+    <!-- SCRIPTS -->
+    <script>
+        // MOBILE MENU JAVASCRIPT
+        const menuToggle = document.getElementById('menuToggle');
+        const mobileNavbar = document.getElementById('mobileNavbar');
+
+        menuToggle.addEventListener('click', () => {
+            mobileNavbar.classList.toggle('active');
+            const icon = menuToggle.querySelector('i');
+            if (mobileNavbar.classList.contains('active')) {
+                icon.classList.remove('fa-bars');
+                icon.classList.add('fa-xmark');
+            } else {
+                icon.classList.remove('fa-xmark');
+                icon.classList.add('fa-bars');
+            }
+        });
+
+        // SCROLL REVEAL ANIMATION JAVASCRIPT
+        const revealElements = document.querySelectorAll('.reveal');
+        
+        const revealOnScroll = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if(entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                    observer.unobserve(entry.target); // Animates only once
+                }
+            });
+        }, {
+            threshold: 0.15 // Triggers when 15% of element is visible
+        });
+
+        revealElements.forEach(element => {
+            revealOnScroll.observe(element);
+        });
+    </script>
+</body>
+</html>
