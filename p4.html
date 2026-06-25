@@ -1,0 +1,861 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project 04 Details | Harry Architect</title>
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Explore the technical drawing database, architectural blueprints, and high-definition 3D visualizations for Project 04 (2 Kanal House) by Harry Architect, Pakistan's No.1 Architectural & Construction Website.">
+    <meta name="keywords" content="Harry Architect, Architectural Design Pakistan, 2 Kanal House Plan, Construction Drawings, 3D Elevation, Floor Plans, Pattoki Construction">
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="Harry Architect">
+    
+    <!-- Open Graph / Facebook SEO -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Project 04 Details | Harry Architect">
+    <meta property="og:description" content="Complete structural detail, floor layouts, and 3D architectural visualizations for Project 04.">
+    <meta property="og:image" content="p4a.webp">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/webp" href="logo.webp">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* --- CSS VARIABLES & RESET --- */
+        :root {
+            --primary-bg: #121212;
+            --card-bg: #1e1e1e;
+            --text-color: #F5F5F5;
+            --text-muted: #b3b3b3;
+            --accent-gold: #D4AF37;
+            --accent-bronze: #CD7F32;
+            --font-main: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            text-decoration: none;
+            list-style: none;
+        }
+
+        body {
+            background-color: var(--primary-bg);
+            color: var(--text-color);
+            font-family: var(--font-main);
+            overflow-x: hidden;
+            line-height: 1.6;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        section {
+            padding: 60px 0;
+        }
+
+        /* --- HEADER & NAVBAR --- */
+        header {
+            background-color: rgba(18, 18, 18, 0.95);
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            border-bottom: 1px solid rgba(212, 175, 55, 0.1);
+            backdrop-filter: blur(10px);
+        }
+
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 80px;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--accent-gold);
+        }
+
+        .navbar {
+            display: flex;
+            gap: 15px;
+        }
+
+        .nav-link {
+            color: var(--text-color);
+            font-size: 0.95rem;
+            font-weight: 500;
+            padding: 8px 12px;
+            border-radius: 4px;
+            transition: all 0.3s ease;
+        }
+
+        .nav-link:hover, .nav-link.active {
+            color: var(--accent-gold);
+            background-color: rgba(212, 175, 55, 0.1);
+        }
+
+        .menu-btn {
+            display: none;
+            color: var(--text-color);
+            font-size: 1.5rem;
+            cursor: pointer;
+            z-index: 1001;
+        }
+
+        /* --- HERO SECTION --- */
+        .projects-hero {
+            position: relative;
+            height: 35vh;
+            min-height: 250px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            background: url('img009.webp') no-repeat center center/cover;
+            padding-top: 80px;
+        }
+
+        .hero-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to bottom, rgba(18, 18, 18, 0.7), rgba(18, 18, 18, 0.9));
+            z-index: 1;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero-content h1 {
+            font-size: 3rem;
+            color: var(--accent-gold);
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+
+        .hero-content p {
+            font-size: 1.1rem;
+            color: var(--text-muted);
+        }
+
+        .hero-content p a {
+            color: var(--accent-gold);
+        }
+
+        /* --- PROJECT MAIN DETAILS BANNER --- */
+        .project-intro-bar {
+            background-color: var(--card-bg);
+            border: 1px solid rgba(212, 175, 55, 0.1);
+            border-radius: 8px;
+            padding: 30px;
+            margin-bottom: 40px;
+            animation: fadeInUp 0.8s ease backwards;
+        }
+
+        .project-intro-bar h2 {
+            color: var(--accent-gold);
+            font-size: 1.8rem;
+            margin-bottom: 10px;
+        }
+
+        .project-intro-bar p {
+            color: var(--text-muted);
+            font-size: 1rem;
+            max-width: 900px;
+        }
+
+        /* --- MAIN LAYOUT STRUCTURE --- */
+        .projects-main-grid {
+            display: grid;
+            grid-template-columns: 2.8fr 1.2fr;
+            gap: 40px;
+            align-items: start;
+        }
+
+        /* --- DRAWINGS CARDS GRID --- */
+        .projects-cards-holder {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 25px;
+            animation: fadeInUp 1s ease 0.2s backwards;
+        }
+
+        .p-card {
+            background-color: var(--card-bg);
+            border-radius: 8px;
+            overflow: hidden;
+            border: 1px solid rgba(255,255,255,0.03);
+            transition: transform 0.3s, border-color 0.3s;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .p-card:hover {
+            transform: translateY(-5px);
+            border-color: rgba(212, 175, 55, 0.2);
+        }
+
+        /* --- FIXED: 1:1 Aspect Ratio Box for Drawings --- */
+        .p-img-box {
+            position: relative;
+            width: 100%;
+            aspect-ratio: 1 / 1;
+            overflow: hidden;
+            background-color: #ffffff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 10px;
+        }
+
+        .p-img-box img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            transition: transform 0.5s;
+        }
+
+        .p-card:hover .p-img-box img {
+            transform: scale(1.05);
+        }
+
+        .p-details {
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+        }
+
+        .p-title {
+            font-size: 1.15rem;
+            color: var(--text-color);
+            margin-bottom: 8px;
+            font-weight: 600;
+        }
+
+        .p-desc-line {
+            font-size: 0.9rem;
+            color: var(--text-muted);
+            line-height: 1.4;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        /* --- SIDEBAR CONTAINERS --- */
+        .sidebar-container {
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
+            position: sticky;
+            top: 110px;
+            animation: fadeInUp 1s ease 0.4s backwards;
+        }
+
+        .sidebar-box {
+            background-color: var(--card-bg);
+            padding: 35px 25px;
+            border-radius: 10px;
+            border: 1px solid rgba(212, 175, 55, 0.2);
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+
+        .sidebar-box i.box-icon {
+            font-size: 3rem;
+            color: var(--accent-gold);
+            margin-bottom: 20px;
+        }
+
+        .sidebar-box h3 {
+            font-size: 1.6rem;
+            color: var(--text-color);
+            margin-bottom: 15px;
+        }
+
+        .sidebar-box p {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            margin-bottom: 30px;
+        }
+
+        .phone-call-btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            background-color: var(--accent-gold);
+            color: var(--primary-bg);
+            padding: 15px;
+            font-size: 1.1rem;
+            font-weight: bold;
+            border-radius: 6px;
+            transition: all 0.3s ease;
+        }
+
+        .phone-call-btn:hover {
+            background-color: transparent;
+            color: var(--accent-gold);
+            border: 1px solid var(--accent-gold);
+        }
+
+        .offer-box {
+            border: 1px dashed var(--accent-gold);
+            background: linear-gradient(145deg, #1e1e1e, #151515);
+        }
+
+        .offer-box i.box-icon {
+            color: #ffcc00;
+            animation: pulse 2s infinite;
+        }
+
+        .offer-tag {
+            background-color: rgba(212, 175, 55, 0.15);
+            color: var(--accent-gold);
+            padding: 5px 15px;
+            border-radius: 20px;
+            display: inline-block;
+            font-size: 0.85rem;
+            font-weight: bold;
+            text-transform: uppercase;
+            margin-bottom: 15px;
+            letter-spacing: 1px;
+        }
+
+        .whatsapp-book-btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            background-color: #25D366;
+            color: #ffffff;
+            padding: 15px;
+            font-size: 1.1rem;
+            font-weight: bold;
+            border-radius: 6px;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3);
+        }
+
+        .whatsapp-book-btn:hover {
+            background-color: #20ba5a;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(37, 211, 102, 0.4);
+        }
+
+        /* --- ANIMATIONS KEYS --- */
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.08); }
+            100% { transform: scale(1); }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* --- DUAL FLOATING ACTIONS BUTTONS --- */
+        .floating-actions-wrapper {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            z-index: 9999;
+        }
+
+        .floating-btn {
+            width: 55px;
+            height: 55px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            color: #ffffff;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.4);
+            transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            cursor: pointer;
+        }
+
+        .floating-btn:hover {
+            transform: translateY(-5px) scale(1.05);
+        }
+
+        .floating-whatsapp {
+            background-color: #25D366;
+        }
+
+        .floating-home {
+            background-color: var(--accent-gold);
+            color: var(--primary-bg);
+        }
+
+        /* --- FOOTER --- */
+        footer {
+            background-color: #0c0c0c;
+            padding: 70px 0 20px 0;
+            border-top: 1px solid rgba(212, 175, 55, 0.1);
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr;
+            gap: 50px;
+            margin-bottom: 5px;
+        }
+
+        .footer-col h3 {
+            color: var(--accent-gold);
+            font-size: 1.3rem;
+            margin-bottom: 25px;
+        }
+
+        .footer-col p {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            margin-bottom: 20px;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 15px;
+        }
+
+        .social-links a {
+            width: 40px;
+            height: 40px;
+            background-color: var(--card-bg);
+            color: var(--text-color);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            font-size: 1.1rem;
+            transition: all 0.3s;
+        }
+
+        .social-links a:hover {
+            background-color: var(--accent-gold);
+            color: var(--primary-bg);
+            transform: translateY(-3px);
+        }
+
+        .footer-links {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 12px;
+        }
+
+        .footer-links a {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            transition: color 0.3s;
+        }
+
+        .footer-links a:hover {
+            color: var(--accent-gold);
+        }
+
+        .content-info-list {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .content-info-list li {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            color: var(--text-muted);
+            font-size: 0.95rem;
+        }
+
+        .content-info-list i {
+            color: var(--accent-gold);
+            font-size: 1.1rem;
+            width: 20px;
+        }
+
+        .copyright-bar {
+            text-align: center;
+            padding-top: 30px;
+            margin-top: 40px;
+            border-top: 1px solid rgba(255,255,255,0.05);
+            font-size: 0.9rem;
+            color: var(--text-muted);
+        }
+
+        /* --- RESPONSIVE MEDIA QUERIES --- */
+        @media (max-width: 992px) {
+            .navbar {
+                display: flex;
+                flex-direction: column;
+                position: absolute;
+                top: 80px;
+                left: -100%;
+                width: 100%;
+                background-color: rgba(18, 18, 18, 0.98);
+                padding: 20px 5%;
+                gap: 10px;
+                border-bottom: 1px solid rgba(212, 175, 55, 0.2);
+                transition: left 0.4s ease;
+                backdrop-filter: blur(15px);
+            }
+
+            .navbar.active {
+                left: 0;
+            }
+            
+            .menu-btn {
+                display: block;
+            }
+
+            .projects-main-grid {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+
+            .sidebar-container {
+                position: static;
+                max-width: 500px;
+                margin: 0 auto;
+                width: 100%;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .hero-content h1 {
+                font-size: 2.3rem;
+            }
+            .projects-cards-holder {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- NAVBAR SECTION -->
+    <header>
+        <div class="container nav-container">
+            <a href="index.html" class="logo">
+                <i class="fa-solid fa-compass-drafting"></i> Harry Architect
+            </a>
+            <ul class="navbar" id="mobileNavbar">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="about.html" class="nav-link">About</a></li>
+                <li><a href="projects.html" class="nav-link active">Projects</a></li>
+                <li><a href="design-elevation.html" class="nav-link">Design&Elevation</a></li>
+                <li><a href="services.html" class="nav-link">Services</a></li>
+                <li><a href="packages.html" class="nav-link">Packages</a></li>
+                <li><a href="blogs.html" class="nav-link">Blogs</a></li>
+                <li><a href="contact.html" class="nav-link">Contact</a></li>
+            </ul>
+            <div class="menu-btn" id="menuToggle"><i class="fa-solid fa-bars"></i></div>
+        </div>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section class="projects-hero">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1>Project 04 Details</h1>
+            <p><a href="index.html">Home</a> | <a href="projects.html">Projects</a> | Project 04</p>
+        </div>
+    </section>
+
+    <!-- MAIN DISPLAY WITH SIDEBAR -->
+    <section>
+        <div class="container">
+            
+            <!-- Project Detail / Intro Bar -->
+            <div class="project-intro-bar">
+                <h2>2 Kanal House | Client: SHAHZAIB AHMAD</h2>
+                <p>This section provides a transparent view of the complete technical drawing database and architectural blueprint set for Project 04. Every structural detail, floor layout, and 3D visualization is engineered to high-definition professional standards.</p>
+            </div>
+
+            <div class="projects-main-grid">
+                
+                <!-- Left Side Grid Container for Drawings -->
+                <div class="projects-cards-holder">
+
+                    <!-- Card 1: 3D Elevation -->
+                    <div class="p-card">
+                        <div class="p-img-box">
+                            <img src="p4a.webp" alt="3D Elevation">
+                        </div>
+                        <div class="p-details">
+                            <h3 class="p-title">3D Elevation</h3>
+                            <p class="p-desc-line">Premium photo-realistic exterior rendering featuring materials, textures, and modern lighting systems.</p>
+                        </div>
+                    </div>
+
+                    <!-- Card 2: 2D Elevation -->
+                    <div class="p-card">
+                        <div class="p-img-box">
+                            <img src="p4b.webp" alt="2D Elevation">
+                        </div>
+                        <div class="p-details">
+                            <h3 class="p-title">2D Elevation</h3>
+                            <p class="p-desc-line">Detailed standard technical front face projection with accurate architectural vertical measurements.</p>
+                        </div>
+                    </div>
+
+                    <!-- Card 3: Furniture Plan Ground Floor -->
+                    <div class="p-card">
+                        <div class="p-img-box">
+                            <img src="p4c.webp" alt="Furniture Plan Ground Floor">
+                        </div>
+                        <div class="p-details">
+                            <h3 class="p-title">Furniture Plan Ground Floor</h3>
+                            <p class="p-desc-line">Optimized structural furniture layout planning and luxury clearance margins for the ground floor zones.</p>
+                        </div>
+                    </div>
+
+                    <!-- Card 4: Furniture Plan First Floor -->
+                    <div class="p-card">
+                        <div class="p-img-box">
+                            <img src="p4d.webp" alt="Furniture Plan First Floor">
+                        </div>
+                        <div class="p-details">
+                            <h3 class="p-title">Furniture Plan First Floor</h3>
+                            <p class="p-desc-line">Functional bed setups, luxury lounge placements, and wardrobe mapping for the first floor rooms.</p>
+                        </div>
+                    </div>
+
+                    <!-- Card 5: Furniture Plan Second Floor -->
+                    <div class="p-card">
+                        <div class="p-img-box">
+                            <img src="p4e.webp" alt="Furniture Plan Second Floor">
+                        </div>
+                        <div class="p-details">
+                            <h3 class="p-title">Furniture Plan Second Floor</h3>
+                            <p class="p-desc-line">Upper rooftop area layout showing creative sitting configurations and open terrace space management.</p>
+                        </div>
+                    </div>
+
+                    <!-- Card 6: Layout Ground Floor -->
+                    <div class="p-card">
+                        <div class="p-img-box">
+                            <img src="p4f.webp" alt="Layout Ground Floor">
+                        </div>
+                        <div class="p-details">
+                            <h3 class="p-title">Layout Ground Floor</h3>
+                            <p class="p-desc-line">Core spatial masonry dimensions, room configurations, and wall openings for the primary ground floor setup.</p>
+                        </div>
+                    </div>
+
+                    <!-- Card 7: Layout First Floor -->
+                    <div class="p-card">
+                        <div class="p-img-box">
+                            <img src="p4g.webp" alt="Layout First Floor">
+                        </div>
+                        <div class="p-details">
+                            <h3 class="p-title">Layout First Floor</h3>
+                            <p class="p-desc-line">Strategic horizontal spatial blueprint detailing bedrooms, balconies, and internal void regions.</p>
+                        </div>
+                    </div>
+
+                    <!-- Card 8: Layout Second Floor -->
+                    <div class="p-card">
+                        <div class="p-img-box">
+                            <img src="p4h.webp" alt="Layout Second Floor">
+                        </div>
+                        <div class="p-details">
+                            <h3 class="p-title">Layout Second Floor</h3>
+                            <p class="p-desc-line">Top floor room masonry boundaries, kitchenettes, and clear structural layout specifications.</p>
+                        </div>
+                    </div>
+
+                    <!-- Card 9: Excavation Plan -->
+                    <div class="p-card">
+                        <div class="p-img-box">
+                            <img src="p4i.webp" alt="Excavation Plan">
+                        </div>
+                        <div class="p-details">
+                            <h3 class="p-title">Excavation Plan</h3>
+                            <p class="p-desc-line">Crucial foundation leveling details, absolute plot markings, and dig depth limits for on-site engineering.</p>
+                        </div>
+                    </div>
+
+                    <!-- Card 10: Septic Tank & Stair Detail -->
+                    <div class="p-card">
+                        <div class="p-img-box">
+                            <img src="p4j.webp" alt="Septic Tank or Stair Detail">
+                        </div>
+                        <div class="p-details">
+                            <h3 class="p-title">Septic Tank & Stair Detail</h3>
+                            <p class="p-desc-line">Precise structural civil reinforcement details for wastewater systems and absolute step rise-and-tread scales.</p>
+                        </div>
+                    </div>
+
+                    <!-- Card 11: Electric Plan Ground Floor -->
+                    <div class="p-card">
+                        <div class="p-img-box">
+                            <img src="p4k.webp" alt="Electric Plan Ground Floor">
+                        </div>
+                        <div class="p-details">
+                            <h3 class="p-title">Electric Plan Ground Floor</h3>
+                            <p class="p-desc-line">Conduit distribution network layout, control switchboard setups, and main fixture lines for the ground level.</p>
+                        </div>
+                    </div>
+
+                    <!-- Card 12: Electric Plan First Floor -->
+                    <div class="p-card">
+                        <div class="p-img-box">
+                            <img src="p4l.webp" alt="Electric Plan First Floor">
+                        </div>
+                        <div class="p-details">
+                            <h3 class="p-title">Electric Plan First Floor</h3>
+                            <p class="p-desc-line">Complete mapping for standard ceiling fan nodes, illumination boards, and secure appliance hookups.</p>
+                        </div>
+                    </div>
+
+                    <!-- Card 13: Electric Plan Second Floor -->
+                    <div class="p-card">
+                        <div class="p-img-box">
+                            <img src="p4m.webp" alt="Electric Plan Second Floor">
+                        </div>
+                        <div class="p-details">
+                            <h3 class="p-title">Electric Plan Second Floor</h3>
+                            <p class="p-desc-line">Dedicated power distributions, weather-proof outdoor lighting channels, and rooftop line blueprints.</p>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Right Side Sidebar Options -->
+                <div class="sidebar-container">
+                    
+                    <!-- Box 1: Need Help -->
+                    <div class="sidebar-box">
+                        <div class="box-icon"><i class="fa-solid fa-circle-question"></i></div>
+                        <h3>Need Help</h3>
+                        <p>Please call us for any kind of help, support or inquiry. Our representative will respond quickly.</p>
+                        <a href="tel:+923245301575" class="phone-call-btn">
+                            <i class="fa-solid fa-phone"></i> +923245301575
+                        </a>
+                    </div>
+
+                    <!-- Box 2: Discount Offer Box -->
+                    <div class="sidebar-box offer-box">
+                        <div class="offer-tag">Limited Time Offer</div>
+                        <div class="box-icon"><i class="fa-solid fa-tags"></i></div>
+                        <h3>Get 15% Discount</h3>
+                        <p>Get a special 15% discount on all custom interior and architectural design orders placed online today!</p>
+                        <a href="https://wa.me/923245301575?text=Hi%20Harry%20Architect,%20I%20want%20to%20book%20a%20design%20and%20avail%20the%2015%%20online%20discount%20offer." target="_blank" class="whatsapp-book-btn">
+                            <i class="fa-brands fa-whatsapp"></i> Book Now
+                        </a>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER SECTION -->
+    <footer>
+        <div class="container footer-grid">
+            <div class="footer-col">
+                <h3>About Us</h3>
+                <p>Harry architect was established in Pattoki Punjab, Pakistan in 2022. The company grew organically and gained extensive experience in Pakistan. Currently giving services all over Pakistan, Harry architect has accumulated an impressive portfolio of projects that spans the breadth of building genres – from residential, commercial, leisure, retail, and interior design. The years of experience and absolute commitment to quality enhance the reputation as a premier contractor.</p>
+                <div class="social-links">
+                    <a href="https://www.facebook.com/share/1Cnjxv192U/?mibextid=wwXIfr" target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="https://www.instagram.com/harryarchitecture?igsh=MWkxNmxqdWM4bzM0Mw%3D%3D&utm_source=qr" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://www.tiktok.com/@harryarchitect?_r=1&_t=ZS-97PktKCWtDG" target="_blank"><i class="fa-brands fa-tiktok"></i></a>
+                    <a href="https://youtube.com/@harry_architect?si=gAx_jFO3uc8M3Oyh" target="_blank"><i class="fa-brands fa-youtube"></i></a>
+                </div>
+            </div>
+
+            <div class="footer-col">
+                <h3>Company</h3>
+                <div class="footer-links">
+                    <a href="index.html">Home</a>
+                    <a href="about.html">About</a>
+                    <a href="projects.html">Projects</a>
+                    <a href="design-elevation.html">Design & Elevation</a>
+                    <a href="services.html">Services</a>
+                    <a href="packages.html">Packages</a>
+                    <a href="blogs.html">Blogs</a>
+                    <a href="Contact.html">Contact</a>
+                    <a href="privacy-policy.html">Privacy Policy</a>
+                </div>
+            </div>
+
+            <div class="footer-col">
+                <h3>Content Us</h3>
+                <ul class="content-info-list">
+                    <li><i class="fa-solid fa-location-dot"></i> Pattoki, District Kasur</li>
+                    <li><i class="fa-solid fa-phone"></i> +923245301575</li>
+                    <li><i class="fa-solid fa-envelope"></i> Harry846376@gmail.com</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="container copyright-bar">
+            <p>© 2026 Harry Architect | Pakistan's No.1 Architectural & Construction Website. All rights reserved. | Update : v2.0</p>
+        </div>
+    </footer>
+
+    <!-- DUAL FLOATING ACTIONS BUTTONS -->
+    <div class="floating-actions-wrapper">
+        <a href="https://wa.me/923245301575?text=Hi%20Harry%20Architect,%20I%20visited%20your%20Projects%20page%20and%20want%20to%20discuss%20a%20project." target="_blank" class="floating-btn floating-whatsapp" title="Chat on WhatsApp">
+            <i class="fa-brands fa-whatsapp"></i>
+        </a>
+        <a href="index.html" class="floating-btn floating-home" title="Go to Home">
+            <i class="fa-solid fa-house"></i>
+        </a>
+    </div>
+
+    <!-- MOBILE MENU JAVASCRIPT -->
+    <script>
+        const menuToggle = document.getElementById('menuToggle');
+        const mobileNavbar = document.getElementById('mobileNavbar');
+
+        menuToggle.addEventListener('click', () => {
+            mobileNavbar.classList.toggle('active');
+            const icon = menuToggle.querySelector('i');
+            if (mobileNavbar.classList.contains('active')) {
+                icon.classList.remove('fa-bars');
+                icon.classList.add('fa-xmark');
+            } else {
+                icon.classList.remove('fa-xmark');
+                icon.classList.add('fa-bars');
+            }
+        });
+    </script>
+</body>
+</html>
